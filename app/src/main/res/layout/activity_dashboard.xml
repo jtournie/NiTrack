@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ff333333">
+
+    <AnalogClock
+        android:id="@+id/Clock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:dial="@drawable/custom_clock"
+        android:hand_hour="@drawable/clock_hands"
+        android:hand_minute="@drawable/clock_hand_minute"
+        android:layout_marginTop="20dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:layout_weight="1"
+        />
+
+    <ImageView
+        android:id="@+id/ImageCurrentState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/nofoodallowed"
+        android:layout_below="@id/Clock"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1"
+        />
+
+
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ImageCurrentState"
+        android:layout_weight="1"
+        android:layout_alignLeft="@id/Clock"
+        android:layout_alignRight="@id/Clock"
+        android:layout_marginTop="0dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <TextView
+                android:id="@+id/TextRemainingTimeTitle" android:text="Start eating in"
+                android:layout_weight="1" android:background="#dcdcdc"
+                android:textColor="#000000"
+                android:padding="10dip" android:gravity="center"/>
+            <TextView
+                android:id="@+id/TextRemainingTimeValue" android:text="0h23"
+                android:layout_weight="1" android:background="#d3d3d3"
+                android:textColor="#000000"
+                android:padding="10dip" android:gravity="center"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+</RelativeLayout>

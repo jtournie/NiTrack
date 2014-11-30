@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="Medicine time"
+        android:key="pref_key_medicine_time_title">
+
+        <ListPreference
+            android:key="pref_key_intake_hour"
+            android:title="Hour"
+            android:summary="Hour at which time the patient takes the medicine"
+            android:entries="@array/hourIntake"
+            android:entryValues="@array/hourIntake"
+            />
+
+        <ListPreference
+            android:key="pref_key_intake_minute"
+            android:title="Minute"
+            android:summary="Minute in the hour at which time the patient takes the medicine"
+            android:entries="@array/minIntake"
+            android:entryValues="@array/minIntake"
+            />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Notifications"
+        android:key="pref_key_notification_title">
+
+        <CheckBoxPreference
+            android:key="pref_key_alarm1_enable"
+            android:summary="Notify when the patient should stop eating"
+            android:title="Stop eating"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm1_tone"
+            android:dependency="pref_key_alarm1_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+
+        <CheckBoxPreference
+            android:key="pref_key_alarm2_enable"
+            android:summary="Notify when the patient should take the medicine"
+            android:title="Take medicine"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm2_tone"
+            android:dependency="pref_key_alarm2_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+
+        <CheckBoxPreference
+            android:key="pref_key_alarm3_enable"
+            android:summary="Notify when the patient can start eating"
+            android:title="Start eating"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm3_tone"
+            android:dependency="pref_key_alarm3_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>
