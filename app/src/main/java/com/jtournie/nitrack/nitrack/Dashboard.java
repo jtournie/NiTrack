@@ -2,10 +2,11 @@ package com.jtournie.nitrack.nitrack;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Calendar;
 
 /**
  * Created by jtournie on 22/11/14.
@@ -24,16 +25,52 @@ public class Dashboard {
         this.applicationContext = applicationContext;
     }
 
+    public void updateContentWithNewCurrentIntakeTime()
+    {
+        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        //cancel all the alarms - The needed ones will be reset afterwards
+        AlarmManagerHelper.cancelAlarms(dashboardActivity);
+
+        //change the intake time to now
+        Calendar currentTime = Calendar.getInstance();
+        if ( currentTime.get(Calendar.HOUR_OF_DAY) < 12) //change the morning intake time
+        {
+            editor.putString("pref_key_intake_am_hour", String.valueOf(currentTime.get(Calendar.HOUR_OF_DAY)));
+            editor.putString("pref_key_intake_am_minute", String.valueOf(currentTime.get(Calendar.MINUTE)));
+            editor.commit();
+        } else //change the pm intake time
+        {
+            editor.putString("pref_key_intake_pm_hour", String.valueOf(currentTime.get(Calendar.HOUR_OF_DAY)));
+            editor.putString("pref_key_intake_pm_minute", String.valueOf(currentTime.get(Calendar.MINUTE)));
+            editor.commit();
+        }
+
+        //and reset all the needed alarms
+        AlarmManagerHelper.setAlarms(dashboardActivity);
+
+        //redraw the dashboard
+        updateContent();
+    }
+
     public void updateContent()
     {
-        //get all the data needed
-        User currentUser = new User();
+        //get all the data needed for the user from preferences
+        User currentUser = new User( applicationContext);
 
-        currentUser.setIntakeTime( getIntakeTimeFromSharedPreferences());
 
+
+        //get the complete medicine schedule
         MedicineSchedule medicineSchedule = new MedicineSchedule( currentUser);
 
-        //now get the text cell references of the table
+
+        //now rotate the clock background to adapt to the intake time
+        ImageView clockBackground = new ImageView(dashboardActivity);
+        clockBackground = (ImageView)dashboardActivity.findViewById(R.id.ClockBackground);
+        clockBackground.setRotation( ClockBackground.getRotationAngle(applicationContext));
+
+        // now get the text cell references of the table
         TextView textRemainingTimeTitle=new TextView(dashboardActivity);
         textRemainingTimeTitle=(TextView)dashboardActivity.findViewById(R.id.TextRemainingTimeTitle);
 
@@ -75,14 +112,6 @@ public class Dashboard {
 
 
         return;
-    }
-
-    private NiTime getIntakeTimeFromSharedPreferences() {
-        NiTime niTime = new NiTime();
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext);
-        niTime.Hour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"));
-        niTime.Minute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        return niTime;
     }
 
 }

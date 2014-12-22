@@ -125,25 +125,25 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         AlarmModel alarm2am = new AlarmModel();
         AlarmModel alarm3am = new AlarmModel();
 
-        alarm1am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"))-2;
-        alarm1am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm1am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1_enable", false);
+        alarm1am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"))-2;
+        alarm1am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
+        alarm1am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1am_enable", false);
         alarm1am.name = "Stop eating (Morning)";
-        alarm1am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1_tone", "N/A"));
+        alarm1am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1am_tone", "N/A"));
         alarm1am.id = 1;
 
-        alarm2am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"));
-        alarm2am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm2am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2_enable", false);
+        alarm2am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"));
+        alarm2am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
+        alarm2am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2am_enable", false);
         alarm2am.name = "Take medicine (Morning)";
-        alarm2am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2_tone", "N/A"));
+        alarm2am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2am_tone", "N/A"));
         alarm2am.id = 2;
 
-        alarm3am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"))+1;
-        alarm3am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm3am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3_enable", false);
+        alarm3am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"))+1;
+        alarm3am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
+        alarm3am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3am_enable", false);
         alarm3am.name = "Eating allowed (Morning)";
-        alarm3am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3_tone", "N/A"));
+        alarm3am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3am_tone", "N/A"));
         alarm3am.id = 3;
 
         //the 3 alarms in the afternoon
@@ -151,25 +151,25 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         AlarmModel alarm2pm = new AlarmModel();
         AlarmModel alarm3pm = new AlarmModel();
 
-        alarm1pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"))+12-2;
-        alarm1pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm1pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1_enable", false);
+        alarm1pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"))-2;
+        alarm1pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
+        alarm1pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1pm_enable", false);
         alarm1pm.name = "Stop eating (Evening)";
-        alarm1pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1_tone", "N/A"));
+        alarm1pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1pm_tone", "N/A"));
         alarm1pm.id = 11;
 
-        alarm2pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"))+12;
-        alarm2pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm2pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2_enable", false);
+        alarm2pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"));
+        alarm2pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
+        alarm2pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2pm_enable", false);
         alarm2pm.name = "Take medicine (Evening)";
-        alarm2pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2_tone", "N/A"));
+        alarm2pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2pm_tone", "N/A"));
         alarm2pm.id = 12;
 
-        alarm3pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_hour", "7"))+12+1;
-        alarm3pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_minute", "7"));
-        alarm3pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3_enable", false);
+        alarm3pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"))+1;
+        alarm3pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
+        alarm3pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3pm_enable", false);
         alarm3pm.name = "Eating allowed (Evening)";
-        alarm3pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3_tone", "N/A"));
+        alarm3pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3pm_tone", "N/A"));
         alarm3pm.id = 13;
 
 

@@ -4,7 +4,8 @@ package com.jtournie.nitrack.nitrack;
  * Created by jtournie on 22/11/14.
  */
 public class MedicineSchedule {
-    private NiTime inTakeTime;
+    private NiTime inTakeTimeAM;
+    private NiTime inTakeTimePM;
 
     final int STATE_EATING = 1;
     final int STATE_FEASTING_PRE_MEDICINE = 2;
@@ -12,26 +13,47 @@ public class MedicineSchedule {
 
     public MedicineSchedule(User currentUser)
     {
-        inTakeTime = new NiTime();
-        this.inTakeTime = currentUser.getIntakeTime();
+        inTakeTimeAM = new NiTime();
+        this.inTakeTimeAM = currentUser.getIntakeTimeAM();
+
+        inTakeTimePM = new NiTime();
+        this.inTakeTimePM = currentUser.getIntakeTimePM();
     }
 
     public NiTime getRemainingTimeStopEating()
     {
-        NiTime stopEatingTime = inTakeTime.getRemainingTime(-2);
-        return stopEatingTime;
+        NiTime startEatingTime = getRemainingTimeGeneric(-2);
+        return startEatingTime;
     }
 
     public NiTime getRemainingTimeStartEating()
     {
-        NiTime startEatingTime = inTakeTime.getRemainingTime(1);
+        NiTime startEatingTime = getRemainingTimeGeneric(1);
         return startEatingTime;
     }
 
     public NiTime getRemainingTimeTakeMedicine()
     {
-        NiTime takeMedicineTime = inTakeTime.getRemainingTime(0);
+        NiTime takeMedicineTime = getRemainingTimeGeneric(0);
         return takeMedicineTime;
+    }
+
+    private NiTime getRemainingTimeGeneric( int hour)
+    {
+        NiTime genericActionRemainingTime;
+
+        NiTime genericActionRemainingTimeAM = inTakeTimeAM.getRemainingTime(hour);
+        NiTime genericActionRemainingTimePM = inTakeTimePM.getRemainingTime(hour);
+
+        if (genericActionRemainingTimeAM.isSmaller(genericActionRemainingTimePM) == 1)
+        {
+            genericActionRemainingTime = genericActionRemainingTimeAM;
+        } else
+        {
+            genericActionRemainingTime = genericActionRemainingTimePM;
+        }
+
+        return genericActionRemainingTime;
     }
 
     public int getState()
@@ -42,28 +64,25 @@ public class MedicineSchedule {
         NiTime niTimeTakeMedicine = getRemainingTimeTakeMedicine();
         NiTime niTimeStartEating = getRemainingTimeStartEating();
 
-        if ( niTimeStopEating.IsTimeBefore == true) {
+        if ( niTimeStopEating.isSmaller(niTimeTakeMedicine) == 1 && niTimeStopEating.isSmaller(niTimeStartEating) == 1)
+        {
             state = STATE_EATING;
-            return state;
         }
 
-        if ( niTimeTakeMedicine.IsTimeBefore == true)
+        if ( niTimeTakeMedicine.isSmaller(niTimeStopEating) == 1 && niTimeTakeMedicine.isSmaller(niTimeStartEating) == 1)
         {
             state = STATE_FEASTING_PRE_MEDICINE;
-            return state;
         }
 
-        if ( niTimeStartEating.IsTimeBefore == true)
+        if ( niTimeStartEating.isSmaller(niTimeStopEating) == 1 && niTimeStartEating.isSmaller(niTimeTakeMedicine) == 1)
         {
             state = STATE_FEASTING_POST_MEDICINE;
-            return state;
         }
-
 
         return state;
     }
 
-    public void setInTakeTime(NiTime inTakeHour) {
-        this.inTakeTime = inTakeHour;
+    public void setInTakeTimeAM(NiTime inTakeHour) {
+        this.inTakeTimeAM = inTakeHour;
     }
 }

@@ -1,59 +1,117 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:title="Medicine time"
-        android:key="pref_key_medicine_time_title">
+        android:title="Morning medicine time"
+        android:key="pref_key_medicine_time_am_title">
 
-        <ListPreference
-            android:key="pref_key_intake_hour"
+
+        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_am_hour"
             android:title="Hour"
-            android:summary="Hour at which time the patient takes the medicine"
-            android:entries="@array/hourIntake"
-            android:entryValues="@array/hourIntake"
+            android:entries="@array/hourIntakeAM"
+            android:entryValues="@array/hourIntakeAM"
             />
 
-        <ListPreference
-            android:key="pref_key_intake_minute"
+        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_am_minute"
             android:title="Minute"
-            android:summary="Minute in the hour at which time the patient takes the medicine"
+            android:entries="@array/minIntake"
+            android:entryValues="@array/minIntake"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="Evening medicine time"
+        android:key="pref_key_medicine_time_pm_title">
+
+
+        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_pm_hour"
+            android:title="Hour"
+            android:entries="@array/hourIntakePM"
+            android:entryValues="@array/hourIntakePM"
+            />
+
+        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_pm_minute"
+            android:title="Minute"
             android:entries="@array/minIntake"
             android:entryValues="@array/minIntake"
             />
     </PreferenceCategory>
 
     <PreferenceCategory
-        android:title="Notifications"
+        android:title="Morning Notifications"
         android:key="pref_key_notification_title">
 
         <CheckBoxPreference
-            android:key="pref_key_alarm1_enable"
-            android:summary="Notify when the patient should stop eating"
-            android:title="Stop eating"
+            android:key="pref_key_alarm1am_enable"
+            android:summary="Notify when morning feasting starts"
+            android:title="Morning stop eating"
             android:defaultValue="false" />
         <RingtonePreference
-            android:key="pref_key_alarm1_tone"
-            android:dependency="pref_key_alarm1_enable"
+            android:key="pref_key_alarm1am_tone"
+            android:dependency="pref_key_alarm1am_enable"
             android:summary="Sound to be played for this notification"
             android:title="Notification sound"/>
 
         <CheckBoxPreference
-            android:key="pref_key_alarm2_enable"
-            android:summary="Notify when the patient should take the medicine"
-            android:title="Take medicine"
+            android:key="pref_key_alarm2am_enable"
+            android:summary="Notify when morning medicine should be taken"
+            android:title="Morning take medicine"
             android:defaultValue="false" />
         <RingtonePreference
-            android:key="pref_key_alarm2_tone"
-            android:dependency="pref_key_alarm2_enable"
+            android:key="pref_key_alarm2am_tone"
+            android:dependency="pref_key_alarm2am_enable"
             android:summary="Sound to be played for this notification"
             android:title="Notification sound"/>
 
         <CheckBoxPreference
-            android:key="pref_key_alarm3_enable"
-            android:summary="Notify when the patient can start eating"
-            android:title="Start eating"
+            android:key="pref_key_alarm3am_enable"
+            android:summary="Notify when morning feasting ends"
+            android:title="Morning start eating"
             android:defaultValue="false" />
         <RingtonePreference
-            android:key="pref_key_alarm3_tone"
-            android:dependency="pref_key_alarm3_enable"
+            android:key="pref_key_alarm3am_tone"
+            android:dependency="pref_key_alarm3am_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Evening Notifications"
+        android:key="pref_key_notification_title">
+        <CheckBoxPreference
+            android:key="pref_key_alarm1pm_enable"
+            android:summary="Notify when evening feasting starts"
+            android:title="Evening stop eating"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm1pm_tone"
+            android:dependency="pref_key_alarm1pm_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+
+        <CheckBoxPreference
+            android:key="pref_key_alarm2pm_enable"
+            android:summary="Notify when evening medicine should be taken"
+            android:title="Evening take medicine"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm2pm_tone"
+            android:dependency="pref_key_alarm2pm_enable"
+            android:summary="Sound to be played for this notification"
+            android:title="Notification sound"/>
+
+        <CheckBoxPreference
+            android:key="pref_key_alarm3pm_enable"
+            android:summary="Notify when evening feasting ends"
+            android:title="Evening start eating"
+            android:defaultValue="false" />
+        <RingtonePreference
+            android:key="pref_key_alarm3pm_tone"
+            android:dependency="pref_key_alarm3pm_enable"
             android:summary="Sound to be played for this notification"
             android:title="Notification sound"/>
     </PreferenceCategory>

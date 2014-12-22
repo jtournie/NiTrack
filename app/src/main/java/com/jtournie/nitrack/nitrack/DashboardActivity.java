@@ -24,7 +24,7 @@ public class DashboardActivity extends Activity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.dashboard, menu);
+        getMenuInflater().inflate(R.menu.menu_settings, menu);
         return true;
     }
 
@@ -52,7 +52,15 @@ public class DashboardActivity extends Activity {
             settingsActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplication().startActivity(settingsActivityIntent);
             return true;
+        } else if( id == R.id.action_change_intake_time)
+        {
+            Dashboard dashboard = new Dashboard(this, getApplicationContext());
+
+            dashboard.updateContentWithNewCurrentIntakeTime();
+
+            return true;
         }
+
         return super.onOptionsItemSelected(item);
     }
 }

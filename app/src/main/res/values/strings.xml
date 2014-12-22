@@ -4,6 +4,7 @@
     <string name="app_name">NiTrack</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="change_intake_time">Set intake time to now</string>
     <string name="title_activity_settings">SettingsActivity</string>
 
 </resources>
