@@ -6,10 +6,13 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.PowerManager;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
+
+import java.util.Calendar;
 
 /**
  * Created by jtournie on 29/11/14.
@@ -34,6 +37,8 @@ public class AlarmActivity extends Activity {
         int timeMinute = getIntent().getIntExtra(AlarmManagerHelper.TIME_MINUTE, 0);
         String tone = getIntent().getStringExtra(AlarmManagerHelper.TONE);
 
+
+
         TextView tvName = (TextView) findViewById(R.id.alarm_screen_name);
         tvName.setText(name);
 
@@ -53,23 +58,31 @@ public class AlarmActivity extends Activity {
             }
         });
 
-        //Play alarm tone
+        //check if the activity is started correctly
+        //as we observed that the tone is played
+        //several times after the original ones
+        Calendar currentTime = Calendar.getInstance();
+        int currentHour = currentTime.get(Calendar.HOUR_OF_DAY);
+        int currentMinute = currentTime.get(Calendar.MINUTE);
 
-        mPlayer = new MediaPlayer();
-        try {
-            if (tone != null && !tone.equals("")) {
-                Uri toneUri = Uri.parse(tone);
+        if (currentHour == timeHour && currentMinute == timeMinute) {
+            //Play alarm tone
+            mPlayer = new MediaPlayer();
+            try {
+                if (tone != null && !tone.equals("")) {
+                    Uri toneUri = Uri.parse(tone);
 
-                if (toneUri != null) {
-                    mPlayer.setDataSource(this, toneUri);
-                    mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
-                    mPlayer.setLooping(false);
-                    mPlayer.prepare();
-                    mPlayer.start();
+                    if (toneUri != null) {
+                        mPlayer.setDataSource(this, toneUri);
+                        mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
+                        mPlayer.setLooping(false);
+                        mPlayer.prepare();
+                        mPlayer.start();
+                    }
                 }
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
         }
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
