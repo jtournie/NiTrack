@@ -1,4 +1,4 @@
-package com.jtournie.nitrack.nitrack;
+package com.jtournie.cml.tasitrack;
 
 import android.annotation.SuppressLint;
 import android.app.AlarmManager;
@@ -7,10 +7,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.app.PendingIntent;
 import android.content.SharedPreferences;
-import android.media.RingtoneManager;
 import android.net.Uri;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Calendar;

@@ -1,4 +1,4 @@
-package com.jtournie.nitrack.nitrack;
+package com.jtournie.cml.tasitrack;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;

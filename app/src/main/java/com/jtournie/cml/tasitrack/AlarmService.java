@@ -1,9 +1,8 @@
-package com.jtournie.nitrack.nitrack;
+package com.jtournie.cml.tasitrack;
 
 import android.app.Service;
 import android.os.IBinder;
 import android.content.Intent;
-import android.util.Log;
 
 /**
  * Created by jtournie on 29/11/14.

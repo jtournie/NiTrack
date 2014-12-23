@@ -1,4 +1,4 @@
-package com.jtournie.nitrack.nitrack;
+package com.jtournie.cml.tasitrack;
 
 import android.app.Activity;
 import android.os.Bundle;
