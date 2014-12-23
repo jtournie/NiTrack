@@ -172,7 +172,15 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm3pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3pm_tone", "N/A"));
         alarm3pm.id = 13;
 
-
+        /**
+         * Testing
+         */
+        /*alarm1pm.timeHour = 13;
+        alarm1pm.timeMinute = 56;
+        alarm2pm.timeHour = 13;
+        alarm2pm.timeMinute = 57;
+        alarm3pm.timeHour = 13;
+        alarm3pm.timeMinute = 58;*/
 
         listAlarms.add(alarm1am);
         listAlarms.add(alarm2am);

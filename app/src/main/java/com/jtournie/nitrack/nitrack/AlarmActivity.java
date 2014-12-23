@@ -54,7 +54,6 @@ public class AlarmActivity extends Activity {
                     mPlayer.stop();
                 }
 
-                mWakeLock.release();
                 finish();
             }
         });
@@ -78,23 +77,10 @@ public class AlarmActivity extends Activity {
             e.printStackTrace();
         }
 
-        //Ensure wakelock release
-        Runnable releaseWakelock = new Runnable() {
-
-            @Override
-            public void run() {
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
-                getWindow().clearFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
-
-                if (mWakeLock != null && mWakeLock.isHeld()) {
-                    mWakeLock.release();
-                }
-            }
-        };
-
-        new Handler().postDelayed(releaseWakelock, WAKELOCK_TIMEOUT);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
     }
 
     @SuppressWarnings("deprecation")
@@ -108,25 +94,11 @@ public class AlarmActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD);
 
-        // Acquire wakelock
-        PowerManager pm = (PowerManager) getApplicationContext().getSystemService(Context.POWER_SERVICE);
-        if (mWakeLock == null) {
-            mWakeLock = pm.newWakeLock((PowerManager.FULL_WAKE_LOCK | PowerManager.SCREEN_BRIGHT_WAKE_LOCK | PowerManager.ACQUIRE_CAUSES_WAKEUP), TAG);
-        }
-
-        if (!mWakeLock.isHeld()) {
-            mWakeLock.acquire();
-            Log.i(TAG, "Wakelock aquired!!");
-        }
 
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        if (mWakeLock != null && mWakeLock.isHeld()) {
-            mWakeLock.release();
-        }
     }
 }
