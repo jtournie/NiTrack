@@ -4,14 +4,14 @@
         android:key="pref_key_medicine_time_am_title">
 
 
-        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_am_hour"
             android:title="Hour"
             android:entries="@array/hourIntakeAM"
             android:entryValues="@array/hourIntakeAM"
             />
 
-        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_am_minute"
             android:title="Minute"
             android:entries="@array/minIntake"
@@ -25,14 +25,14 @@
         android:key="pref_key_medicine_time_pm_title">
 
 
-        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_pm_hour"
             android:title="Hour"
             android:entries="@array/hourIntakePM"
             android:entryValues="@array/hourIntakePM"
             />
 
-        <com.jtournie.nitrack.nitrack.ListPreferenceShowSummary
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_pm_minute"
             android:title="Minute"
             android:entries="@array/minIntake"

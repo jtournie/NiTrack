@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jtournie.nitrack.nitrack" >
+    package="com.jtournie.cml.tasitrack" >
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.jtournie.nitrack.nitrack.DashboardActivity"
+            android:name="com.jtournie.cml.tasitrack.DashboardActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,26 +19,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jtournie.nitrack.nitrack.AlarmActivity" />
+        <activity android:name="com.jtournie.cml.tasitrack.AlarmActivity" />
 
         <service
-            android:name="com.jtournie.nitrack.nitrack.AlarmService"
+            android:name="com.jtournie.cml.tasitrack.AlarmService"
             android:enabled="true" />
 
-        <receiver android:name="com.jtournie.nitrack.nitrack.AlarmManagerHelper" >
+        <receiver android:name="com.jtournie.cml.tasitrack.AlarmManagerHelper" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="com.jtournie.nitrack.nitrack.SettingsActivity"
+            android:name="com.jtournie.cml.tasitrack.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
         <activity
-            android:name="com.jtournie.nitrack.nitrack.AboutActivity"
+            android:name="com.jtournie.cml.tasitrack.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="com.jtournie.nitrack.nitrack.DashboardActivity" >
+            android:parentActivityName="com.jtournie.cml.tasitrack.DashboardActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jtournie.nitrack.nitrack.DashboardActivity" />
