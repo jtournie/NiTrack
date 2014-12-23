@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">NiTrack</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">TasiTrack</string>
+    <string name="text_about_content">Version 1.0 beta\n\n23-December-2014\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
     <string name="action_settings">Settings</string>
     <string name="change_intake_time">Set intake time to now</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="about">About</string>
+    <string name="title_activity_about">About</string>
+
 
 </resources>

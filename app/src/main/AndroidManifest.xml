@@ -35,6 +35,14 @@
             android:name="com.jtournie.nitrack.nitrack.SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+        <activity
+            android:name="com.jtournie.nitrack.nitrack.AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.jtournie.nitrack.nitrack.DashboardActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.jtournie.nitrack.nitrack.DashboardActivity" />
+        </activity>
     </application>
 
 </manifest>

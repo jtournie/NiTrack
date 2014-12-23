@@ -59,6 +59,11 @@ public class DashboardActivity extends Activity {
             dashboard.updateContentWithNewCurrentIntakeTime();
 
             return true;
+        } else if( id == R.id.action_about)
+        {
+            Intent intent = new Intent(getBaseContext(), AboutActivity.class);
+            startActivity(intent);
+            return true;
         }
 
         return super.onOptionsItemSelected(item);
