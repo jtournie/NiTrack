@@ -50,10 +50,15 @@ public class AlarmActivity extends Activity {
 
             @Override
             public void onClick(View view) {
-                if (mPlayer.isPlaying()) {
-                    mPlayer.stop();
+                try {
+                    if (mPlayer != null) { //redundant with the try/catch but make it faster
+                        if (mPlayer.isPlaying()) {
+                            mPlayer.stop();
+                        }
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-
                 finish();
             }
         });
@@ -74,7 +79,7 @@ public class AlarmActivity extends Activity {
 
                     if (toneUri != null) {
                         mPlayer.setDataSource(this, toneUri);
-                        mPlayer.setAudioStreamType(AudioManager.STREAM_ALARM);
+                        mPlayer.setAudioStreamType(AudioManager.STREAM_RING);
                         mPlayer.setLooping(false);
                         mPlayer.prepare();
                         mPlayer.start();
