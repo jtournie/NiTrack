@@ -22,6 +22,8 @@ public class AlarmService extends Service {
         Intent alarmIntent = new Intent(getBaseContext(), AlarmActivity.class);
         alarmIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
+        AlarmManagerHelper.setAlarms(this);
+
         if ( null == intent) {
             //we dont go any further, just make sure the service is started
             return START_STICKY;
@@ -30,8 +32,6 @@ public class AlarmService extends Service {
         alarmIntent.putExtras(intent);
 
         getApplication().startActivity(alarmIntent);
-
-        AlarmManagerHelper.setAlarms(this);
 
         return super.onStartCommand(intent, flags, startId);
     }
