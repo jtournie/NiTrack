@@ -88,19 +88,19 @@ public class Dashboard {
         if (iCurrentState == medicineSchedule.STATE_FEASTING_PRE_MEDICINE)
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeTakeMedicine();
-            textRemainingTimeTitle.setText("Take medicine in");
+            textRemainingTimeTitle.setText(R.string.dash_take_medicine_in);
             textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
             iconCurrentState.setImageResource(R.drawable.nofoodallowed);
         } else if( iCurrentState == medicineSchedule.STATE_FEASTING_POST_MEDICINE)
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeStartEating();
-            textRemainingTimeTitle.setText("Can eat in");
+            textRemainingTimeTitle.setText(R.string.dash_can_eat_in);
             textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
             iconCurrentState.setImageResource(R.drawable.nofoodallowed);
         } else  if ( iCurrentState == medicineSchedule.STATE_EATING)
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeStopEating();
-            textRemainingTimeTitle.setText("Stop eating in");
+            textRemainingTimeTitle.setText(R.string.dash_stop_eating_in);
             textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
             iconCurrentState.setImageResource(R.drawable.foodallowed);
         } else

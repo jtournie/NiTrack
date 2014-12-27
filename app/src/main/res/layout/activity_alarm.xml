@@ -10,7 +10,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="28dp"
-        android:text="Alarm!"
+        android:text="@string/alarm_title"
         android:textSize="38dp" />
 
     <TextView
@@ -39,7 +39,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="106dp"
-        android:text="Dismiss"
+        android:text="@string/alarm_button_text"
         android:textSize="38dp" />
 
 </RelativeLayout>

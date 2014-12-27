@@ -126,21 +126,21 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm1am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"))-2;
         alarm1am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
         alarm1am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1am_enable", false);
-        alarm1am.name = "Stop eating (Morning)";
+        alarm1am.name = context.getString(R.string.alarm_text_am1);
         alarm1am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1am_tone", "N/A"));
         alarm1am.id = 1;
 
         alarm2am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"));
         alarm2am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
         alarm2am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2am_enable", false);
-        alarm2am.name = "Take medicine (Morning)";
+        alarm2am.name = context.getString(R.string.alarm_text_am2);
         alarm2am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2am_tone", "N/A"));
         alarm2am.id = 2;
 
         alarm3am.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"))+1;
         alarm3am.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
         alarm3am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3am_enable", false);
-        alarm3am.name = "Eating allowed (Morning)";
+        alarm3am.name = context.getString(R.string.alarm_text_am3);
         alarm3am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3am_tone", "N/A"));
         alarm3am.id = 3;
 
@@ -152,21 +152,21 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm1pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"))-2;
         alarm1pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
         alarm1pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1pm_enable", false);
-        alarm1pm.name = "Stop eating (Evening)";
+        alarm1pm.name = context.getString(R.string.alarm_text_pm1);
         alarm1pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1pm_tone", "N/A"));
         alarm1pm.id = 11;
 
         alarm2pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"));
         alarm2pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
         alarm2pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2pm_enable", false);
-        alarm2pm.name = "Take medicine (Evening)";
+        alarm2pm.name = context.getString(R.string.alarm_text_pm2);
         alarm2pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2pm_tone", "N/A"));
         alarm2pm.id = 12;
 
         alarm3pm.timeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"))+1;
         alarm3pm.timeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
         alarm3pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3pm_enable", false);
-        alarm3pm.name = "Eating allowed (Evening)";
+        alarm3pm.name = context.getString(R.string.alarm_text_pm3);
         alarm3pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3pm_tone", "N/A"));
         alarm3pm.id = 13;
 

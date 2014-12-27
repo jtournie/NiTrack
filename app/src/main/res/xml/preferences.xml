@@ -1,19 +1,19 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
     <PreferenceCategory
-        android:title="Morning medicine time"
+        android:title="@string/pref_morning_medicine_time"
         android:key="pref_key_medicine_time_am_title">
 
 
         <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_am_hour"
-            android:title="Hour"
+            android:title="@string/pref_hour"
             android:entries="@array/hourIntakeAM"
             android:entryValues="@array/hourIntakeAM"
             />
 
         <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_am_minute"
-            android:title="Minute"
+            android:title="@string/pref_minute"
             android:entries="@array/minIntake"
             android:entryValues="@array/minIntake"
             />
@@ -21,20 +21,20 @@
 
 
     <PreferenceCategory
-        android:title="Evening medicine time"
+        android:title="@string/pref_evening_medicine_time"
         android:key="pref_key_medicine_time_pm_title">
 
 
         <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_pm_hour"
-            android:title="Hour"
+            android:title="@string/pref_hour"
             android:entries="@array/hourIntakePM"
             android:entryValues="@array/hourIntakePM"
             />
 
         <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_pm_minute"
-            android:title="Minute"
+            android:title="@string/pref_minute"
             android:entries="@array/minIntake"
             android:entryValues="@array/minIntake"
             />
@@ -46,36 +46,36 @@
 
         <CheckBoxPreference
             android:key="pref_key_alarm1am_enable"
-            android:summary="Notify when morning feasting starts"
-            android:title="Morning stop eating"
+            android:summary="@string/pref_notif_morning_stop_eating_details"
+            android:title="@string/pref_notif_evening_stop_eating_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm1am_tone"
             android:dependency="pref_key_alarm1am_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
 
         <CheckBoxPreference
             android:key="pref_key_alarm2am_enable"
-            android:summary="Notify when morning medicine should be taken"
-            android:title="Morning take medicine"
+            android:summary="@string/pref_notif_morning_take_medicine_details"
+            android:title="@string/pref_notif_morning_take_medicine_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm2am_tone"
             android:dependency="pref_key_alarm2am_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
 
         <CheckBoxPreference
             android:key="pref_key_alarm3am_enable"
-            android:summary="Notify when morning feasting ends"
-            android:title="Morning start eating"
+            android:summary="@string/pref_notif_morning_start_eating_details"
+            android:title="@string/pref_notif_morning_start_eating_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm3am_tone"
             android:dependency="pref_key_alarm3am_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
 
     </PreferenceCategory>
 
@@ -84,36 +84,36 @@
         android:key="pref_key_notification_title">
         <CheckBoxPreference
             android:key="pref_key_alarm1pm_enable"
-            android:summary="Notify when evening feasting starts"
-            android:title="Evening stop eating"
+            android:summary="@string/pref_notif_evening_stop_eating_details"
+            android:title="@string/pref_notif_evening_stop_eating_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm1pm_tone"
             android:dependency="pref_key_alarm1pm_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
 
         <CheckBoxPreference
             android:key="pref_key_alarm2pm_enable"
-            android:summary="Notify when evening medicine should be taken"
-            android:title="Evening take medicine"
+            android:summary="@string/pref_notif_evening_take_medicine_details"
+            android:title="@string/pref_notif_evening_take_medicine_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm2pm_tone"
             android:dependency="pref_key_alarm2pm_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
 
         <CheckBoxPreference
             android:key="pref_key_alarm3pm_enable"
-            android:summary="Notify when evening feasting ends"
-            android:title="Evening start eating"
+            android:summary="@string/pref_notif_evening_start_eating_details"
+            android:title="@string/pref_notif_evening_start_eating_title"
             android:defaultValue="false" />
         <RingtonePreference
             android:key="pref_key_alarm3pm_tone"
             android:dependency="pref_key_alarm3pm_enable"
-            android:summary="Sound to be played for this notification"
-            android:title="Notification sound"/>
+            android:summary="@string/pref_notif_sound_detail"
+            android:title="@string/pref_notif_sound_title"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

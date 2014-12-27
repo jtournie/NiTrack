@@ -2,12 +2,19 @@ package com.jtournie.cml.tasitrack;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class DashboardActivity extends Activity {
+
+    Timer autoUpdateDashboard;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,31 @@ public class DashboardActivity extends Activity {
 
         dashboard.updateContent();
 
+        autoUpdateDashboard = new Timer();
+        autoUpdateDashboard.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                runOnUiThread(new Runnable() {
+                    public void run() {
+                        updateDashboardContent();
+                    }
+                });
+            }
+        }, 0, 10000); // updates each 10 secs
+
+    }
+
+    @Override
+    public void onPause() {
+        autoUpdateDashboard.cancel();
+        super.onPause();
+    }
+
+    private void updateDashboardContent()
+    {
+        Dashboard dashboard = new Dashboard(this, getApplicationContext());
+
+        dashboard.updateContent();
     }
 
     @Override
