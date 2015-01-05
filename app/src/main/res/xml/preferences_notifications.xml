@@ -7,7 +7,7 @@
 
 
             <PreferenceCategory
-                android:title="Morning Notifications"
+                android:title="@string/pref_morning_notifications"
                 android:key="pref_key_notification_title">
             <CheckBoxPreference
                 android:key="pref_key_alarm0am_enable"
@@ -58,12 +58,12 @@
     </PreferenceScreen>
 
     <PreferenceScreen
-        android:title="@string/pref_evening_notification_title"
+        android:title="@string/pref_evening_notifications"
         android:summary="@string/pref_evening_notification_summary"
         android:key="pref_key_notification_title">
 
             <PreferenceCategory
-                android:title="Evening Notifications"
+                android:title="@string/pref_evening_notifications"
                 android:key="pref_key_notification_title">
             <CheckBoxPreference
                 android:key="pref_key_alarm0pm_enable"

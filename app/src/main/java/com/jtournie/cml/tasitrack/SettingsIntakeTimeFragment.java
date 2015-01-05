@@ -1,5 +1,7 @@
 package com.jtournie.cml.tasitrack;
 
+import android.appwidget.AppWidgetManager;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.util.Log;
@@ -27,6 +29,10 @@ public class SettingsIntakeTimeFragment extends PreferenceFragment {
 
        //and reset all the needed alarms
        AlarmManagerHelper.setAlarms(getActivity());
+
+       //send broadcast intent to the widgets so they are updated correctly
+       Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
+       getActivity().sendBroadcast( intent);
 
        super.onDestroy();
    }

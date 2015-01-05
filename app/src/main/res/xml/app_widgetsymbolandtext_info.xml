@@ -2,7 +2,7 @@
 <appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
     android:minWidth="250dp" android:minHeight="40dp"
     android:updatePeriodMillis="0"
-    android:previewImage="@drawable/nitrack_icon"
+    android:previewImage="@drawable/widget1_icon"
     android:initialLayout="@layout/app_widgetsymbolandtext"
     android:resizeMode="horizontal|vertical"
     android:widgetCategory="home_screen"

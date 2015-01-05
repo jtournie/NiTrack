@@ -13,6 +13,8 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.RemoteViews;
 
+import java.util.Calendar;
+
 
 /**
  * Implementation of App Widget functionality.
@@ -22,6 +24,8 @@ public class AppWidgetSymbolAndText extends AppWidgetProvider {
     public static String TAG = AppWidgetSymbolAndText.class.getSimpleName();
 
     public static final String ACTION_WIDGET_CLICKED = "com.jtournie.cml.tasitrack.AppWidgetSymbolAndText.ACTION_WIDGET_CLICKED";
+
+    private static final int WIDGET_REFRESH_RATE = 10*1000; //delay between two refresh of thw widget (ms)
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -173,7 +177,8 @@ public class AppWidgetSymbolAndText extends AppWidgetProvider {
         Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 20, intent, PendingIntent.FLAG_UPDATE_CURRENT);
         AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE );
-        alarmManager.setRepeating( AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), 10000, pendingIntent);
+
+        alarmManager.setRepeating( AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), WIDGET_REFRESH_RATE, pendingIntent);
     }
 }
 

@@ -36,6 +36,7 @@ import java.io.IOException;
 public class AppWidgetClock extends AppWidgetProvider {
 
     public static String TAG = AppWidgetClock.class.getSimpleName();
+    private static int iPreviousAngle = 0;
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
@@ -92,13 +93,13 @@ public class AppWidgetClock extends AppWidgetProvider {
     @Override
     public void onEnabled(Context context) {
         // Enter relevant functionality for when the first widget is created
-        setUpdateWidgetAlarm(context);
+
     }
 
     @Override
     public void onDisabled(Context context) {
         // Enter relevant functionality for when the last widget is disabled
-        cancelUpdateWidgetAlarm(context);
+
     }
 
     static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
@@ -115,8 +116,28 @@ public class AppWidgetClock extends AppWidgetProvider {
         appWidgetManager.updateAppWidget(appWidgetId, views);
     }
 
+    /**
+     * Set the correct background image for the clock
+     * based on the needed rotation angle. It loads
+     * the pre-defined resource, instead of doing a rotation
+     * of a reference image as the image changes size depending
+     * on the rotation angle.
+     *
+     * The predefined images are sets for every 10 degrees.
+     *
+     * @param context
+     * @param views
+     */
     static void rotateClockBg( Context context, RemoteViews views) {
         int iAngle = (int)ClockBackground.getRotationAngle(context);
+
+        if ( iAngle == iPreviousAngle)
+        {
+            Log.i(TAG, "Same angle - No need to update widget");
+            return;
+        }
+
+        iPreviousAngle = iAngle;
 
         if ( iAngle < 0)
         {
@@ -145,20 +166,6 @@ public class AppWidgetClock extends AppWidgetProvider {
             Log.e(TAG, "Resource does not exist "+resource);
         }
 
-    }
-
-    private static void cancelUpdateWidgetAlarm(Context context) {
-        Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 20, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE );
-        alarmManager.cancel(pendingIntent);
-    }
-
-    private static void setUpdateWidgetAlarm(Context context) {
-        Intent intent = new Intent(AppWidgetManager.ACTION_APPWIDGET_UPDATE);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 20, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-        AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE );
-        alarmManager.setRepeating( AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(), 10000, pendingIntent);
     }
 }
 

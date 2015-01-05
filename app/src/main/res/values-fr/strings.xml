@@ -46,7 +46,7 @@
     <string name="action_settings_notifications">Notifications...</string>
     <string name="title_activity_settings_notifications">Configuration des Notifications</string>
     <string name="pref_notif_evening_last_meal_title">Dernier snack</string>
-    <string name="pref_notif_evening_last_meal_details">Alarme pour prendre un dernier snack a30 minutes avant le jeûne du soir</string>
+    <string name="pref_notif_evening_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du soir</string>
     <string name="pref_notif_morning_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du matin</string>
     <string name="pref_notif_morning_last_meal_title">Dernier snack</string>
     <string name="alarm_text_am0">Dernier snack (Matin)</string>
@@ -55,5 +55,7 @@
     <string name="pref_evening_notification_summary">Definition des alarmes possible pour la prise du soir</string>
     <string name="pref_morning_notification_title">Notifications (Matin)</string>
     <string name="pref_morning_notification_summary">Definition des alarmes possible pour la prise du matin</string>
+    <string name="add_widget">Ajouter widget</string>
+    <string name="appwidget_text">Exemple</string>
 
 </resources>

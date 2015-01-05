@@ -1,8 +1,11 @@
 package com.jtournie.cml.tasitrack;
 
 import android.net.Uri;
+import android.text.format.Time;
 
 import java.util.Calendar;
+import java.util.Locale;
+import java.util.TimeZone;
 
 /**
  * Created by jtournie on 29/11/14.
@@ -29,12 +32,18 @@ public class AlarmModel {
      */
     public void shiftAlarm( int iHour, int iMinute)
     {
-        long originalTimeInMillisecond = (timeHour-1)*60*60*1000 + timeMinute*60*1000;
-        Calendar shiftedTime = Calendar.getInstance();
-        shiftedTime.setTimeInMillis( originalTimeInMillisecond + iHour*60*60*1000 + iMinute*60*1000);
+        Calendar shiftedTime = Calendar.getInstance(Locale.getDefault());
+
+        shiftedTime.setTimeZone(TimeZone.getDefault());
+
+        long sTimeZoneDifferenceInMillisecond = TimeZone.getDefault().getOffset(System.currentTimeMillis());
+
+        long originalTimeInMillisecond = (timeHour)*60*60*1000 + timeMinute*60*1000 - sTimeZoneDifferenceInMillisecond;
+        shiftedTime.setTimeInMillis( originalTimeInMillisecond + iHour*60*60*1000 + iMinute*60*1000 );
 
         timeHour = shiftedTime.get(Calendar.HOUR_OF_DAY);
         timeMinute = shiftedTime.get(Calendar.MINUTE);
+
 
         return;
 
