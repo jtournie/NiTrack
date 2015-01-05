@@ -1,6 +1,7 @@
 package com.jtournie.cml.tasitrack;
 
 import android.app.Service;
+import android.appwidget.AppWidgetManager;
 import android.os.IBinder;
 import android.content.Intent;
 

@@ -1,11 +1,16 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.jtournie.cml.tasitrack.SettingsActivity">
+    tools:context="com.jtournie.cml.tasitrack.SettingsIntakeTimeActivity">
+
+
+
+    <item android:id="@+id/action_change_intake_time" android:title="@string/change_intake_time"
+        android:orderInCategory="100" android:showAsAction="never" />
 
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 
-    <item android:id="@+id/action_change_intake_time" android:title="@string/change_intake_time"
+    <item android:id="@+id/action_settings_notifications" android:title="@string/action_settings_notifications"
         android:orderInCategory="100" android:showAsAction="never" />
 
     <item android:id="@+id/action_about" android:title="@string/about"

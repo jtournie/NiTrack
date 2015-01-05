@@ -2,51 +2,56 @@
 <resources>
 
     <string name="app_name">TasiTrack</string>
-
     <string name="dash_take_medicine_in">Take medicine in</string>
     <string name="dash_can_eat_in">Can eat in</string>
     <string name="dash_stop_eating_in">Stop eating in</string>
-
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Intake time...</string>
+    <string name="action_settings_notifications">Notifications...</string>
     <string name="change_intake_time">Set intake time to now</string>
-    <string name="title_activity_settings">SettingsActivity</string>
-
+    <string name="title_activity_settings">Intake Time Definition</string>
+    <string name="pref_morning_notification_title">Morning Notifications</string>
+    <string name="pref_morning_notification_summary">Definition of the possible alarms for the morning intake</string>
+    <string name="pref_evening_notification_title">Evening Notifications</string>
+    <string name="pref_evening_notification_summary">Definition of the possible alarms for the evening intake</string>
     <string name="pref_morning_medicine_time">Morning Medicine Time</string>
     <string name="pref_evening_medicine_time">Evening Medicine Time</string>
     <string name="pref_hour">Hour</string>
     <string name="pref_minute">Minute</string>
     <string name="pref_morning_notifications">Morning Notifications</string>
     <string name="pref_evening_notifications">Evening Notifications</string>
-
+    <string name="pref_notif_morning_last_meal_details">Notify to take a snack 30 minutes before feasting</string>
+    <string name="pref_notif_morning_last_meal_title">Morning last meal</string>
     <string name="pref_notif_morning_stop_eating_title">Morning stop eating</string>
     <string name="pref_notif_morning_stop_eating_details">Notify when morning feasting starts</string>
     <string name="pref_notif_morning_take_medicine_title">Morning take medicine</string>
     <string name="pref_notif_morning_take_medicine_details">Notify when the morning medicine should be taken</string>
     <string name="pref_notif_morning_start_eating_title">Morning start eating</string>
     <string name="pref_notif_morning_start_eating_details">Notify when morning feasting ends</string>
-
+    <string name="pref_notif_evening_last_meal_details">Notify to take a snack30 minutes before feasting</string>
+    <string name="pref_notif_evening_last_meal_title">Evening last meal</string>
     <string name="pref_notif_evening_stop_eating_title">Evening stop eating</string>
     <string name="pref_notif_evening_stop_eating_details">Notify when evening feasting starts</string>
     <string name="pref_notif_evening_take_medicine_title">Evening take medicine</string>
     <string name="pref_notif_evening_take_medicine_details">Notify when the evening medicine should be taken</string>
     <string name="pref_notif_evening_start_eating_title">Evening start eating</string>
     <string name="pref_notif_evening_start_eating_details">Notify when evening feasting ends</string>
-
     <string name="alarm_title">Alarm!</string>
+    <string name="alarm_text_am0">Last meal (Morning)</string>
     <string name="alarm_text_am1">Stop eating (Morning)</string>
     <string name="alarm_text_am2">Take medicine (Morning)</string>
     <string name="alarm_text_am3">Start eating (Morning)</string>
+    <string name="alarm_text_pm0">Last meal (Evening)</string>
     <string name="alarm_text_pm1">Stop eating (Evening)</string>
     <string name="alarm_text_pm2">Take medicine (Evening)</string>
     <string name="alarm_text_pm3">Start eating (Evening)</string>
-
     <string name="alarm_button_text">Noted!</string>
-
     <string name="pref_notif_sound_title">Notification sound</string>
     <string name="pref_notif_sound_detail">Sound to be played for this notification</string>
-
-    <string name="about">About</string>
+    <string name="about">About...</string>
     <string name="title_activity_about">About</string>
     <string name="text_about_content">Version 1.0 beta\n\n23-December-2014\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
+    <string name="title_activity_settings_notifications">Notifications Configuration</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
 
 </resources>

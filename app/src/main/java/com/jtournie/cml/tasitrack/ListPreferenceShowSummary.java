@@ -10,7 +10,9 @@ import android.preference.Preference;
  */
 public class ListPreferenceShowSummary extends ListPreference {
 
+
     private final static String TAG = ListPreferenceShowSummary.class.getName();
+    private String sCurrentValue;
 
     public ListPreferenceShowSummary(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -28,7 +30,7 @@ public class ListPreferenceShowSummary extends ListPreference {
 
             @Override
             public boolean onPreferenceChange(Preference arg0, Object arg1) {
-                arg0.setSummary(getEntry());
+                arg0.setSummary(arg1.toString()/*getEntry()*/);
                 return true;
             }
         });
@@ -38,4 +40,5 @@ public class ListPreferenceShowSummary extends ListPreference {
     public CharSequence getSummary() {
         return super.getEntry();
     }
+
 }

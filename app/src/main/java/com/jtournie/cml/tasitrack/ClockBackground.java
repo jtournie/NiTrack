@@ -43,6 +43,7 @@ public class ClockBackground {
 
         float fAngle = -(fRefIntakeTimeInMin-fIntakeTimeInMin)*fDegreePerMinute;
 
+
         return fAngle ;
     }
 }

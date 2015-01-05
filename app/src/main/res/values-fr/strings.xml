@@ -4,12 +4,12 @@
     <string name="app_name">TasiTrack</string>
 
 
-    <string name="title_activity_settings">Configuration</string>
-    <string name="action_settings">Configuration</string>
+    <string name="title_activity_settings">Définition Heures de Prise</string>
+    <string name="action_settings">Heures de prise...</string>
     <string name="change_intake_time">Raccourci heure de prise</string>
 
 
-    <string name="about">A propros</string>
+    <string name="about">A propros...</string>
     <string name="title_activity_about">A propos</string>
     <string name="text_about_content">Version 1.0 beta\n\n23-Décembre-2014\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
     <string name="alarm_button_text">Noté!</string>
@@ -43,5 +43,17 @@
     <string name="pref_notif_morning_take_medicine_details">Alarme de prise du médicament du matin</string>
     <string name="pref_notif_sound_detail">"Sonnerie jouée lors de l'activation de l'alarme"</string>
     <string name="pref_notif_sound_title">Sonnerie</string>
+    <string name="action_settings_notifications">Notifications...</string>
+    <string name="title_activity_settings_notifications">Configuration des Notifications</string>
+    <string name="pref_notif_evening_last_meal_title">Dernier snack</string>
+    <string name="pref_notif_evening_last_meal_details">Alarme pour prendre un dernier snack a30 minutes avant le jeûne du soir</string>
+    <string name="pref_notif_morning_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du matin</string>
+    <string name="pref_notif_morning_last_meal_title">Dernier snack</string>
+    <string name="alarm_text_am0">Dernier snack (Matin)</string>
+    <string name="alarm_text_pm0">Dernier snack (Soir)</string>
+    <string name="pref_evening_notification_title">Notifications (Soir)</string>
+    <string name="pref_evening_notification_summary">Definition des alarmes possible pour la prise du soir</string>
+    <string name="pref_morning_notification_title">Notifications (Matin)</string>
+    <string name="pref_morning_notification_summary">Definition des alarmes possible pour la prise du matin</string>
 
 </resources>

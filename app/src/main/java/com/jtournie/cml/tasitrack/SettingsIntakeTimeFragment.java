@@ -7,7 +7,7 @@ import android.util.Log;
 /**
  * Created by jtournie on 29/11/14.
  */
-public class SettingsFragment extends PreferenceFragment {
+public class SettingsIntakeTimeFragment extends PreferenceFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,7 +23,7 @@ public class SettingsFragment extends PreferenceFragment {
    public void onDestroy()
    {
        String TAG = this.getClass().getSimpleName();
-       Log.i(TAG, "Preference killed!!");
+       //Log.i(TAG, "Preference killed!!");
 
        //and reset all the needed alarms
        AlarmManagerHelper.setAlarms(getActivity());

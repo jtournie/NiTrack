@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jtournie.cml.tasitrack" >
+    package="com.jtournie.cml.tasitrack"
+    android:versionCode="1"
+    android:versionName="1.0beta" >
+
+    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="16" />
 
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/nitrack_icon"
         android:label="@string/app_name"
-
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.jtournie.cml.tasitrack.DashboardActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/app_name" >
+            android:name=".DashboardActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,34 +27,61 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.jtournie.cml.tasitrack.AlarmActivity"
-            android:screenOrientation="portrait">
-         </activity>
+            android:name=".AlarmActivity"
+            android:screenOrientation="portrait" >
+        </activity>
 
         <service
-            android:name="com.jtournie.cml.tasitrack.AlarmService"
+            android:name=".AlarmService"
             android:enabled="true" />
 
-        <receiver android:name="com.jtournie.cml.tasitrack.AlarmManagerHelper" >
+        <receiver android:name=".AlarmManagerHelper" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
 
         <activity
-            android:name="com.jtournie.cml.tasitrack.SettingsActivity"
-            android:screenOrientation="portrait"
-            android:label="@string/title_activity_settings" >
+            android:name=".SettingsIntakeTimeActivity"
+            android:label="@string/title_activity_settings"
+            android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name="com.jtournie.cml.tasitrack.AboutActivity"
+            android:name=".AboutActivity"
             android:label="@string/title_activity_about"
-            android:screenOrientation="portrait"
-            android:parentActivityName="com.jtournie.cml.tasitrack.DashboardActivity" >
+            android:parentActivityName=".DashboardActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.jtournie.nitrack.nitrack.DashboardActivity" />
+                android:value="com.jtournie.cml.tasitrack.DashboardActivity" />
         </activity>
+        <activity
+            android:name=".SettingsNotificationsActivity"
+            android:label="@string/title_activity_settings_notifications" >
+        </activity>
+
+
+
+        <receiver android:name=".AppWidgetClock" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_clock_info" />
+        </receiver>
+
+        <receiver android:name="com.jtournie.cml.tasitrack.AppWidgetSymbolAndText" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.jtournie.cml.tasitrack.AppWidgetSymbolAndText.ACTION_WIDGET_CLICKED" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widgetsymbolandtext_info" />
+        </receiver>
 
     </application>
 

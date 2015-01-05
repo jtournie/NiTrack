@@ -2,9 +2,7 @@ package com.jtournie.cml.tasitrack;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -78,11 +76,18 @@ public class DashboardActivity extends Activity {
         int id = item.getItemId();
         if (id == R.id.action_settings) {
             // Display the fragment as the main content.
-            Intent settingsActivityIntent = new Intent(getBaseContext(), SettingsActivity.class);
+            Intent settingsActivityIntent = new Intent(getBaseContext(), SettingsIntakeTimeActivity.class);
             settingsActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             getApplication().startActivity(settingsActivityIntent);
             return true;
-        } else if( id == R.id.action_change_intake_time)
+        } else if ( id == R.id.action_settings_notifications)
+        {
+            // Display the fragment as the main content.
+            Intent settingsActivityIntent = new Intent(getBaseContext(), SettingsNotificationsActivity.class);
+            settingsActivityIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            getApplication().startActivity(settingsActivityIntent);
+        }
+        else if( id == R.id.action_change_intake_time)
         {
             Dashboard dashboard = new Dashboard(this, getApplicationContext());
 
