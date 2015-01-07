@@ -1,5 +1,6 @@
 package com.jtournie.cml.tasitrack;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 import android.util.Log;
@@ -7,7 +8,9 @@ import android.util.Log;
 /**
  * Created by jtournie on 29/11/14.
  */
-public class SettingsNotificationsFragment extends PreferenceFragment {
+public class SettingsNotificationsFragment extends PreferenceFragment implements SharedPreferences.OnSharedPreferenceChangeListener{
+    private final static String TAG = SettingsNotificationsFragment.class.getName();
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,7 +19,7 @@ public class SettingsNotificationsFragment extends PreferenceFragment {
         addPreferencesFromResource(R.xml.preferences_notifications);
 
         //cancel all the alarms - The needed ones will be reset once the screen is closed
-        AlarmManagerHelper.cancelAlarms(getActivity());
+        //AlarmManagerHelper.cancelAlarms(getActivity());
     }
 
     @Override
@@ -26,8 +29,32 @@ public class SettingsNotificationsFragment extends PreferenceFragment {
         //Log.i(TAG, "Preference killed!!");
 
         //and reset all the needed alarms
-        AlarmManagerHelper.setAlarms(getActivity());
+        //AlarmManagerHelper.setAlarms(getActivity());
 
         super.onDestroy();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        getPreferenceManager().getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
+
+    }
+
+    @Override
+    public void onPause() {
+        getPreferenceManager().getSharedPreferences().unregisterOnSharedPreferenceChangeListener(this);
+        super.onPause();
+    }
+
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,String key)
+    {
+        Log.i(TAG, "Preferences changed");
+
+        //cancel all the alarms - The needed ones will be reset once the screen is closed
+        AlarmManagerHelper.cancelAlarms(getActivity());
+
+        //and reset all the needed alarms
+        AlarmManagerHelper.setAlarms(getActivity());
     }
 }

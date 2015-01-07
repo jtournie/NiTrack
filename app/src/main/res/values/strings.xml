@@ -27,7 +27,7 @@
     <string name="pref_notif_morning_take_medicine_details">Notify when the morning medicine should be taken</string>
     <string name="pref_notif_morning_start_eating_title">Morning start eating</string>
     <string name="pref_notif_morning_start_eating_details">Notify when morning feasting ends</string>
-    <string name="pref_notif_evening_last_meal_details">Notify to take a snack30 minutes before feasting</string>
+    <string name="pref_notif_evening_last_meal_details">Notify to take a snack 30 minutes before feasting</string>
     <string name="pref_notif_evening_last_meal_title">Evening last meal</string>
     <string name="pref_notif_evening_stop_eating_title">Evening stop eating</string>
     <string name="pref_notif_evening_stop_eating_details">Notify when evening feasting starts</string>
@@ -49,7 +49,7 @@
     <string name="pref_notif_sound_detail">Sound to be played for this notification</string>
     <string name="about">About...</string>
     <string name="title_activity_about">About</string>
-    <string name="text_about_content">Version 1.0 beta\n\n23-December-2014\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
+    <string name="text_about_content">Version 2.0 \n\n05-January-2015\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
     <string name="title_activity_settings_notifications">Notifications Configuration</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>

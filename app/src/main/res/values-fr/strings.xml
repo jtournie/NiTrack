@@ -11,7 +11,7 @@
 
     <string name="about">A propros...</string>
     <string name="title_activity_about">A propos</string>
-    <string name="text_about_content">Version 1.0 beta\n\n23-Décembre-2014\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
+    <string name="text_about_content">Version 2.0 \n\n05-Janvier-2015\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
     <string name="alarm_button_text">Noté!</string>
     <string name="alarm_text_am1">Début du jeûne (Matin)</string>
     <string name="alarm_text_am2">Prendre médicament</string>

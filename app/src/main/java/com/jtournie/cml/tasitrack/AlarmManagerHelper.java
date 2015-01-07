@@ -89,7 +89,13 @@ public class AlarmManagerHelper extends BroadcastReceiver {
 
         if (listAlarms != null) {
             for (AlarmModel alarm : listAlarms) {
-                if (alarm.isEnabled) {
+
+                //disables all alarms even the ones that are
+                //not active as it does not have any impact
+                //and makes things easier for handling the
+                //sharedpreferences
+                //if (alarm.isEnabled)
+                {
                     PendingIntent pIntent = createPendingIntent(context, alarm);
 
                     AlarmManager alarmManager = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
@@ -127,7 +133,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         //morning and evening intake time
         int iMorningIntakeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"));
         int iMorningIntakeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
-        int iEveningIntakeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "7"));
+        int iEveningIntakeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "19"));
         int iEveningIntakeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
 
         //the 4 alarms in the morning
@@ -181,7 +187,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm0pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm0pm_enable", false);
         alarm0pm.name = context.getString(R.string.alarm_text_pm0);
         alarm0pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm0pm_tone", "N/A"));
-        alarm0pm.id = 11;
+        alarm0pm.id = 10;
 
         alarm1pm.timeHour = iEveningIntakeHour;
         alarm1pm.timeMinute = iEveningIntakeMinute;
