@@ -11,6 +11,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.SystemClock;
 import android.preference.PreferenceManager;
+import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -48,7 +49,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
 
                 Calendar calendar = Calendar.getInstance();
 
-                //Log.i("CurrentTime", "CurrentTime "+calendar.get(calendar.YEAR)+" "+calendar.get(calendar.MONTH)+" "+calendar.get(calendar.DAY_OF_MONTH)+" "+calendar.get(calendar.HOUR_OF_DAY)+":"+calendar.get(calendar.MINUTE));
+                //Log.i("CurrentTime", "CurrentTime " + calendar.get(calendar.YEAR) + " " + calendar.get(calendar.MONTH) + " " + calendar.get(calendar.DAY_OF_MONTH) + " " + calendar.get(calendar.HOUR_OF_DAY) + ":" + calendar.get(calendar.MINUTE));
                 calendar.set(Calendar.HOUR_OF_DAY, alarm.timeHour);
                 calendar.set(Calendar.MINUTE, alarm.timeMinute);
                 calendar.set(Calendar.SECOND, 0);

@@ -36,7 +36,7 @@ public class AlarmModel {
 
         shiftedTime.setTimeZone(TimeZone.getDefault());
 
-        long sTimeZoneDifferenceInMillisecond = TimeZone.getDefault().getOffset(System.currentTimeMillis());
+        long sTimeZoneDifferenceInMillisecond = TimeZone.getDefault().getRawOffset();
 
         long originalTimeInMillisecond = (timeHour)*60*60*1000 + timeMinute*60*1000 - sTimeZoneDifferenceInMillisecond;
         shiftedTime.setTimeInMillis( originalTimeInMillisecond + iHour*60*60*1000 + iMinute*60*1000 );
