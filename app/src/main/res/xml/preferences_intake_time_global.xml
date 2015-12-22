@@ -1,8 +1,23 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <ListPreference
+            android:title="Dosage"
+            android:summary="Configure the number of medicine intake per day"
+            android:key="pref_key_dosage"
+            android:defaultValue="2"
+            android:entries="@array/pref_dosage_entries"
+            android:entryValues="@array/pref_dosage_values" />
+
+
+    <PreferenceScreen
+        android:title="@string/pref_intake_time_title"
+        android:summary="@string/pref_intake_time_summary"
+        android:key="pref_key_intake_time_title">
+
     <PreferenceCategory
         android:title="@string/pref_morning_medicine_time"
         android:key="pref_key_medicine_time_am_title">
-
 
         <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
             android:key="pref_key_intake_am_hour"
@@ -43,5 +58,29 @@
             android:defaultValue="0"
             />
     </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/pref_onetime_medicine_time"
+            android:key="pref_key_onetime_time_title">
+
+
+            <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+                android:key="pref_key_intake_onetime_hour"
+                android:title="@string/pref_hour"
+                android:entries="@array/hourIntakeOneTime"
+                android:entryValues="@array/hourIntakeOneTime"
+                android:defaultValue="21"
+                />
+
+            <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+                android:key="pref_key_intake_onetime_minute"
+                android:title="@string/pref_minute"
+                android:entries="@array/minIntake"
+                android:entryValues="@array/minIntake"
+                android:defaultValue="30"
+                />
+    </PreferenceCategory>
+
+    </PreferenceScreen>
 
 </PreferenceScreen>
