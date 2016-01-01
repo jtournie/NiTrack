@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TasiTrack</string>
-    <string name="dash_take_medicine_in">Take medicine in</string>
-    <string name="dash_can_eat_in">Can eat in</string>
-    <string name="dash_stop_eating_in">Stop eating in</string>
+    <string name="dash_take_medicine_in">Take medicine in </string>
+    <string name="dash_can_eat_in">Can eat in </string>
+    <string name="dash_stop_eating_in">Stop eating in </string>
     <string name="action_settings">Intake time...</string>
     <string name="action_settings_notifications">Notifications...</string>
     <string name="change_intake_time">Set intake time to now</string>
@@ -35,23 +34,42 @@
     <string name="pref_notif_evening_take_medicine_details">Notify when the evening medicine should be taken</string>
     <string name="pref_notif_evening_start_eating_title">Evening start eating</string>
     <string name="pref_notif_evening_start_eating_details">Notify when evening feasting ends</string>
-    <string name="alarm_title">Alarm!</string>
-    <string name="alarm_text_am0">Last meal (Morning)</string>
-    <string name="alarm_text_am1">Stop eating (Morning)</string>
-    <string name="alarm_text_am2">Take medicine (Morning)</string>
-    <string name="alarm_text_am3">Start eating (Morning)</string>
-    <string name="alarm_text_pm0">Last meal (Evening)</string>
-    <string name="alarm_text_pm1">Stop eating (Evening)</string>
-    <string name="alarm_text_pm2">Take medicine (Evening)</string>
-    <string name="alarm_text_pm3">Start eating (Evening)</string>
-    <string name="alarm_button_text">Noted!</string>
+    <string name="alarm_title">Notification</string>
+    <string name="alarm_text_am0">Last snack\nMorning</string>
+    <string name="alarm_text_am1">Stop eating\nMorning</string>
+    <string name="alarm_text_am2">Take medicine\nMorning</string>
+    <string name="alarm_text_am3">Start eating\nMorning</string>
+    <string name="alarm_text_pm0">Last snack\nEvening</string>
+    <string name="alarm_text_pm1">Stop eating\nEvening</string>
+    <string name="alarm_text_pm2">Take medicine\nEvening</string>
+    <string name="alarm_text_pm3">Start eating\nEvening</string>
+    <string name="alarm_button_text">Noted</string>
     <string name="pref_notif_sound_title">Notification sound</string>
     <string name="pref_notif_sound_detail">Sound to be played for this notification</string>
     <string name="about">About...</string>
     <string name="title_activity_about">About</string>
-    <string name="text_about_content">Version 2.0 \n\n05-January-2015\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
+    <string name="text_about_content">Version 2.0 \n\n29-December-2015\n\nPlease send your feedback to:\n jeancharles.tournier@gmail.com</string>
+    <string name="text_credits_content">\nIcon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></string>
+    <string name="text_credits_ui">\nGraphic design collaborator Erika Crastz\n<a href="http://www.ecrastz.com" title="ecrastz">www.ecrastz.com</a>\ninfo@ecrastz.com</string>
     <string name="title_activity_settings_notifications">Notifications Configuration</string>
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
+    <string name="notification_generic">Notification</string>
+    <string name="alarm_ack_info">Touch anywhere to close the alarm screen</string>
+    <string name="pref_intake_time_summary" >Set the medicine intake times</string>
+    <string name="pref_intake_time_title" >Intake time</string>
+    <string name="pref_onetime_medicine_time" >Intake time</string>
+    <string name="pref_intake_time_summary_one" >Set the medicine intake time</string>
+    <string name="pref_notif_once_title" >Take medicine</string>
+    <string name="pref_notif_once_details" >Notify when the medicine shall be taken</string>
+    <string name="alarm_text_once" >Take medicine</string>
+    <string name="dosage_reminder" >Do not forget to set the medicine intake time</string>
+    <string name="firstUseWarningTitle">Welcome!</string>
+    <string name="firstUseWarningMessage">This is the first time you open this application.\nMake sure to correctly configure the medicine dosage and intake time(s).</string>
+    <string name="pref_dosage_title" >Dosage</string>
+    <string name="pref_dosage_summary">Configure the number of medicine intake per day</string>
+    <string name="text_credits_content_lmcfrance">\nApplication supported by LMC France\n<a href="http://www.lmc-france.fr">http://www.lmc-france.fr</a>\ncontact@lmc-france.fr</string>
+    <string name="app_name">STOP CML</string>
+
 
 </resources>

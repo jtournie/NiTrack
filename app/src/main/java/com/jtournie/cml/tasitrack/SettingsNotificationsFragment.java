@@ -15,11 +15,19 @@ public class SettingsNotificationsFragment extends PreferenceFragment implements
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.preferences_notifications);
+        // Load the preferences_intake_time_global from an XML resource
 
-        //cancel all the alarms - The needed ones will be reset once the screen is closed
-        //AlarmManagerHelper.cancelAlarms(getActivity());
+        TasitrackPreferences pref = new TasitrackPreferences(getActivity());
+
+        if (pref.dosage == 1)
+        {
+            addPreferencesFromResource(R.xml.preferences_notifications_once);
+        } else
+        {
+            addPreferencesFromResource(R.xml.preferences_notifications_twice);
+        }
+
+
     }
 
     @Override

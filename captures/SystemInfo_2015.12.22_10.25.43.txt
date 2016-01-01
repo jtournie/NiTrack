@@ -1,0 +1,59 @@
+TASK com.jtournie.nitrack.nitrack id=1576
+  ACTIVITY com.jtournie.nitrack.nitrack/com.jtournie.cml.tasitrack.DashboardActivity 183529c2 pid=21463
+    Local Activity 12778db9 State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={0.85 208mcc1mnc en_US ldltr sw360dp w360dp h615dp 480dpi nrml long port finger -keyb/v/h -nav/h s.48}
+    FragmentManager misc state:
+      mActivity=com.jtournie.cml.tasitrack.DashboardActivity@12778db9
+      mContainer=android.app.Activity$1@1fa85836
+      mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=79860501 (9154 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{35523337 V.E..... R....... 0,0-1080,1920}
+        com.android.internal.widget.ActionBarOverlayLayout{1324c0a4 V.ED.... ........ 0,0-1080,1920 #1020379 android:id/decor_content_parent}
+          android.widget.FrameLayout{3c302e0d V.E..... ........ 0,219-1080,1920 #1020002 android:id/content}
+            android.widget.LinearLayout{3999c1c2 V.E..... ........ 0,0-1080,1701}
+              android.widget.TableLayout{3d8ccbd3 V.E..... ........ 0,90-1080,240 #7f0a000a app:id/tableLayout}
+                android.widget.TableRow{133f4310 V.E..... ........ 0,0-1080,150 #7f0a000b app:id/tableRow1}
+                  android.widget.TextView{26be9e09 V.ED.... ........ 0,0-666,150 #7f0a000c app:id/TextRemainingTimeTitle}
+                  android.widget.TextView{1746380e V.ED.... ........ 666,0-1080,150 #7f0a000d app:id/TextRemainingTimeValue}
+              android.widget.RelativeLayout{36ce522f V.E..... ........ 0,240-1080,990}
+                android.widget.ImageView{323d803c V.ED.... ........ 0,0-1080,750 #7f0a000e app:id/ClockBackground}
+                android.widget.AnalogClock{baa11c5 V.ED.... ........ 0,0-1080,750 #7f0a000f app:id/Clock}
+              android.widget.LinearLayout{c31c71a V.E..... ........ 0,990-1080,1465}
+                android.widget.ImageView{33f7e24b V.ED.... ........ 30,0-360,325 #7f0a0010 app:id/IconStateEating}
+                android.widget.ImageView{38806428 V.ED.... ........ 360,0-720,325 #7f0a0011 app:id/IconStateSnacking}
+                android.widget.ImageView{c1f0541 V.ED.... ........ 720,0-1080,325 #7f0a0012 app:id/IconStateNoEating}
+              android.widget.LinearLayout{2e153ae6 V.E..... ........ 0,1465-1080,1701}
+                android.widget.ImageView{ae05827 V.ED..C. ........ 0,0-360,236 #7f0a0013 app:id/SettingsIcon}
+                android.widget.ImageView{118b9ad4 V.ED..C. ........ 360,0-720,236 #7f0a0014 app:id/NotificationsIcon}
+                android.widget.ImageView{1595b47d V.ED..C. ........ 720,0-1080,236 #7f0a0015 app:id/ExtraIcon}
+          com.android.internal.widget.ActionBarContainer{236a1f72 V.ED.... ........ 0,75-1080,219 #102037a android:id/action_bar_container}
+            com.android.internal.widget.ActionBarView{2df04fc3 V.E..... ........ 0,0-1080,144 #102037b android:id/action_bar}
+              android.widget.LinearLayout{3b719040 V.....C. ........ 25,0-399,144}
+                com.android.internal.widget.ActionBarView$HomeView{3ace1b79 V.E..... ........ 0,0-120,144}
+                  android.widget.ImageView{eb6c0be G.ED.... ......I. 0,0-0,0 #102003b android:id/up}
+                  android.widget.ImageView{37e251f V.ED.... ........ 12,24-108,120 #102002c android:id/home}
+                android.widget.LinearLayout{ff706c V.E..... ........ 120,35-374,108}
+                  android.widget.TextView{208bf635 V.ED.... ........ 0,0-230,73 #10202b6 android:id/action_bar_title}
+                  android.widget.TextView{229a2aca G.ED.... ......I. 0,0-0,0 #10202b7 android:id/action_bar_subtitle}
+              android.widget.ActionMenuView{16e9f43b V.ED.... ........ 912,0-1080,144}
+                android.widget.ActionMenuPresenter$OverflowMenuButton{2aa92758 VFED..C. ........ 0,0-168,144}
+            com.android.internal.widget.ActionBarContextView{3a12c0b1 G.E..... ......ID 0,0-0,0 #102037c android:id/action_context_bar}
+          com.android.internal.widget.ActionBarContainer{2a982996 G.ED.... ......ID 0,0-0,0 #102037d android:id/split_action_bar}
+    Looper (main, tid 1) {3f799917}
+      (Total messages: 0, idling=false, quitting=false)

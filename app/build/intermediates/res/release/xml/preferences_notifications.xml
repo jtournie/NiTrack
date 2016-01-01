@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceScreen
+        android:title="@string/pref_morning_notification_title"
+        android:summary="@string/pref_morning_notification_summary"
+        android:key="pref_key_notification_title">
+
+
+            <PreferenceCategory
+                android:title="@string/pref_morning_notifications"
+                android:key="pref_key_notification_title">
+            <CheckBoxPreference
+                android:key="pref_key_alarm0am_enable"
+                android:title="@string/pref_notif_morning_last_meal_title"
+                android:summary="@string/pref_notif_morning_last_meal_details"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm0am_tone"
+                android:dependency="pref_key_alarm0am_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm1am_enable"
+                android:summary="@string/pref_notif_morning_stop_eating_details"
+                android:title="@string/pref_notif_morning_stop_eating_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm1am_tone"
+                android:dependency="pref_key_alarm1am_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm2am_enable"
+                android:summary="@string/pref_notif_morning_take_medicine_details"
+                android:title="@string/pref_notif_morning_take_medicine_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm2am_tone"
+                android:dependency="pref_key_alarm2am_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm3am_enable"
+                android:summary="@string/pref_notif_morning_start_eating_details"
+                android:title="@string/pref_notif_morning_start_eating_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm3am_tone"
+                android:dependency="pref_key_alarm3am_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+        </PreferenceCategory>
+
+    </PreferenceScreen>
+
+    <PreferenceScreen
+        android:title="@string/pref_evening_notifications"
+        android:summary="@string/pref_evening_notification_summary"
+        android:key="pref_key_notification_title">
+
+            <PreferenceCategory
+                android:title="@string/pref_evening_notifications"
+                android:key="pref_key_notification_title">
+            <CheckBoxPreference
+                android:key="pref_key_alarm0pm_enable"
+                android:summary="@string/pref_notif_evening_last_meal_details"
+                android:title="@string/pref_notif_evening_last_meal_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm0pm_tone"
+                android:dependency="pref_key_alarm0pm_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm1pm_enable"
+                android:summary="@string/pref_notif_evening_stop_eating_details"
+                android:title="@string/pref_notif_evening_stop_eating_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm1pm_tone"
+                android:dependency="pref_key_alarm1pm_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm2pm_enable"
+                android:summary="@string/pref_notif_evening_take_medicine_details"
+                android:title="@string/pref_notif_evening_take_medicine_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm2pm_tone"
+                android:dependency="pref_key_alarm2pm_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+
+            <CheckBoxPreference
+                android:key="pref_key_alarm3pm_enable"
+                android:summary="@string/pref_notif_evening_start_eating_details"
+                android:title="@string/pref_notif_evening_start_eating_title"
+                android:defaultValue="false" />
+            <RingtonePreference
+                android:key="pref_key_alarm3pm_tone"
+                android:dependency="pref_key_alarm3pm_enable"
+                android:summary="@string/pref_notif_sound_detail"
+                android:title="@string/pref_notif_sound_title"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
+</PreferenceScreen><!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_notifications.xml -->

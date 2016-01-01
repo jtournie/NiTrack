@@ -2,6 +2,8 @@ package com.jtournie.cml.tasitrack;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.preference.ListPreference;
+import android.widget.Toast;
 
 
 public class SettingsIntakeTimeActivity extends Activity {
@@ -18,7 +20,6 @@ public class SettingsIntakeTimeActivity extends Activity {
                 .commit();
 
     }
-
 
 
 }

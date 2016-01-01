@@ -3,6 +3,7 @@ package com.jtournie.cml.tasitrack;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -56,19 +57,25 @@ public class Dashboard {
 
     public void updateContent()
     {
-        //get all the data needed for the user from preferences
+        //get all the data needed for the user from preferences_intake_time_global
         User currentUser = new User( applicationContext);
 
 
+        ImageView  iconStateEating = new ImageView(dashboardActivity);
+        iconStateEating = (ImageView)dashboardActivity.findViewById(R.id.IconStateEating);
+
+        ImageView  iconStateSnacking = new ImageView(dashboardActivity);
+        iconStateSnacking = (ImageView)dashboardActivity.findViewById(R.id.IconStateSnacking);
+
+        ImageView  iconStateNoEating = new ImageView(dashboardActivity);
+        iconStateNoEating = (ImageView)dashboardActivity.findViewById(R.id.IconStateNoEating);
+
+
+        adjustContentBasedOnDosage( iconStateEating, iconStateSnacking, iconStateNoEating);
 
         //get the complete medicine schedule
-        MedicineSchedule medicineSchedule = new MedicineSchedule( currentUser);
+        MedicineSchedule medicineSchedule = new MedicineSchedule( currentUser, applicationContext);
 
-
-        //now rotate the clock background to adapt to the intake time
-        ImageView clockBackground = new ImageView(dashboardActivity);
-        clockBackground = (ImageView)dashboardActivity.findViewById(R.id.ClockBackground);
-        clockBackground.setRotation( ClockBackground.getRotationAngle(applicationContext));
 
         // now get the text cell references of the table
         TextView textRemainingTimeTitle=new TextView(dashboardActivity);
@@ -78,9 +85,6 @@ public class Dashboard {
         textRemainingTimeValue=(TextView)dashboardActivity.findViewById(R.id.TextRemainingTimeValue);
 
 
-        ImageView  iconCurrentState = new ImageView(dashboardActivity);
-        iconCurrentState = (ImageView)dashboardActivity.findViewById(R.id.ImageCurrentState);
-
         //And fill in the cells
         //according to the state we are in, color the cell
         NiTime timeRemainingTime;
@@ -89,29 +93,71 @@ public class Dashboard {
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeTakeMedicine();
             textRemainingTimeTitle.setText(R.string.dash_take_medicine_in);
-            textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
-            iconCurrentState.setImageResource(R.drawable.nofoodallowed);
+            textRemainingTimeValue.setText(" " + timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
+            iconStateEating.setImageResource(R.drawable.eating_disabled);
+            iconStateSnacking.setImageResource(R.drawable.snacking_disabled);
+            iconStateNoEating.setImageResource(R.drawable.noeating_enabled);
         } else if( iCurrentState == medicineSchedule.STATE_FEASTING_POST_MEDICINE)
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeStartEating();
             textRemainingTimeTitle.setText(R.string.dash_can_eat_in);
-            textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
-            iconCurrentState.setImageResource(R.drawable.nofoodallowed);
+            textRemainingTimeValue.setText(" "+timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
+            iconStateEating.setImageResource(R.drawable.eating_disabled);
+            iconStateSnacking.setImageResource(R.drawable.snacking_disabled);
+            iconStateNoEating.setImageResource(R.drawable.noeating_enabled);
         } else  if ( iCurrentState == medicineSchedule.STATE_EATING)
         {
             timeRemainingTime = medicineSchedule.getRemainingTimeStopEating();
             textRemainingTimeTitle.setText(R.string.dash_stop_eating_in);
-            textRemainingTimeValue.setText(timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
-            iconCurrentState.setImageResource(R.drawable.foodallowed);
+            textRemainingTimeValue.setText(" "+timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
+            iconStateEating.setImageResource(R.drawable.eating_enabled);
+            iconStateSnacking.setImageResource(R.drawable.snacking_disabled);
+            iconStateNoEating.setImageResource(R.drawable.noeating_disabled);
+        } else if ( iCurrentState == medicineSchedule.STATE_SNACK)
+        {
+            timeRemainingTime = medicineSchedule.getRemainingTimeStopEating();
+            textRemainingTimeTitle.setText(R.string.dash_stop_eating_in);
+            textRemainingTimeValue.setText(" "+timeRemainingTime.Hour + "h" + timeRemainingTime.Minute);
+            iconStateEating.setImageResource(R.drawable.eating_disabled);
+            iconStateSnacking.setImageResource(R.drawable.snacking_enabled);
+            iconStateNoEating.setImageResource(R.drawable.noeating_disabled);
         } else
         {
             textRemainingTimeTitle.setText("Unknown state!");
             textRemainingTimeValue.setText("N/A");
-            iconCurrentState.setImageResource(R.drawable.nofoodallowed);
+            iconStateEating.setImageResource(R.drawable.eating_disabled);
+            iconStateSnacking.setImageResource(R.drawable.snacking_disabled);
+            iconStateNoEating.setImageResource(R.drawable.noeating_disabled);
         }
 
 
         return;
+    }
+
+    private void adjustContentBasedOnDosage( ImageView iconStateEating, ImageView iconStateSnacking, ImageView iconStateNoEating)
+    {
+        TasitrackPreferences tasitrackPreferences = new TasitrackPreferences(applicationContext);
+
+        if( tasitrackPreferences.dosage == 1)
+        {
+            ImageView clockBackground = new ImageView(dashboardActivity);
+            clockBackground = (ImageView)dashboardActivity.findViewById(R.id.ClockBackground);
+            clockBackground.setImageResource(R.drawable.clock_stopcml);
+            iconStateEating.setVisibility(View.INVISIBLE);
+            iconStateNoEating.setVisibility(View.INVISIBLE);
+            iconStateSnacking.setVisibility(View.INVISIBLE);
+
+        } else
+        {
+            //now rotate the clock background to adapt to the intake time
+            ImageView clockBackground = new ImageView(dashboardActivity);
+            clockBackground = (ImageView)dashboardActivity.findViewById(R.id.ClockBackground);
+            clockBackground.setImageResource(R.drawable.clock_stopcml);
+            clockBackground.setRotation( ClockBackground.getRotationAngle(applicationContext));
+            iconStateEating.setVisibility(View.VISIBLE);
+            iconStateNoEating.setVisibility(View.VISIBLE);
+            iconStateSnacking.setVisibility(View.VISIBLE);
+        }
     }
 
 }

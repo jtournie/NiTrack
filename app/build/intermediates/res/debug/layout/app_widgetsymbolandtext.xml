@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="@dimen/widget_margin" android:background="#ff333333"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/WidgetImageCurrentState"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tasitrack_logo"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="2"
+        android:clickable="true" />
+
+
+    <TextView
+        android:id="@+id/WidgetTextRemainingTimeTitle"
+        android:text="Loading..."
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:enabled="true" />
+
+
+
+</LinearLayout>
+<!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/app_widgetsymbolandtext.xml -->

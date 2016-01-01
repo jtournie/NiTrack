@@ -13,18 +13,25 @@ public class User {
     private String fullName;
     private NiTime intakeTimeAM; //0-11
     private NiTime intakeTimePM; //12-23
+    private NiTime intakeTimeOnce; //0-23
 
     public User( Context applicationContext)
     {
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(applicationContext);
 
+        TasitrackPreferences tasitrackPreferences = new TasitrackPreferences( applicationContext);
+
         intakeTimeAM = new NiTime();
-        intakeTimeAM.Hour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"));
-        intakeTimeAM.Minute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
+        intakeTimeAM.Hour = tasitrackPreferences.twice_hour_am;
+        intakeTimeAM.Minute = tasitrackPreferences.twice_minute_am;
 
         intakeTimePM = new NiTime();
-        intakeTimePM.Hour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "19"));
-        intakeTimePM.Minute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
+        intakeTimePM.Hour = tasitrackPreferences.twice_hour_pm;
+        intakeTimePM.Minute = tasitrackPreferences.twice_minute_pm;
+
+        intakeTimeOnce = new NiTime();
+        intakeTimeOnce.Hour = tasitrackPreferences.onetime_hour;
+        intakeTimeOnce.Minute = tasitrackPreferences.onetime_minute;
     }
 
     public String getUserName() {
@@ -58,4 +65,8 @@ public class User {
     public void setIntakeTimePM(NiTime intakeTimePM) {
         this.intakeTimePM = intakeTimePM;
     }
+
+    public NiTime getIntakeTimeOnce() {return  intakeTimeOnce;}
+
+    public void setIntakeTimeOnce(NiTime intakeTimeOnce) { this.intakeTimeOnce = intakeTimeOnce; }
 }

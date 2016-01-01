@@ -130,7 +130,7 @@ public class AppWidgetSymbolAndText extends AppWidgetProvider {
 
     public static void updateContent( Context applicationContext, RemoteViews views)
     {
-        //get all the data needed for the user from preferences
+        //get all the data needed for the user from preferences_intake_time_global
         User currentUser = new User( applicationContext);
 
         //get the complete medicine schedule

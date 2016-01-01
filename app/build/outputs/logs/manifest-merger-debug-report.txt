@@ -1,0 +1,125 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:2:1-90:12
+	package
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:3:5-41
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:5:5-30
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+	android:versionCode
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:4:5-28
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:2:11-69
+uses-sdk
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:7:5-74
+MERGED from [com.android.support:support-v4:20.0.0] /Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/AndroidManifest.xml:16:5-42
+	android:targetSdkVersion
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:7:42-71
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:7:15-41
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:10:5-68
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:10:22-65
+application
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:13:5-88:19
+MERGED from [com.android.support:support-v4:20.0.0] /Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/AndroidManifest.xml:17:5-19
+	android:label
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:16:9-41
+	android:allowBackup
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:14:9-35
+	android:icon
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:15:9-47
+	android:theme
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:17:9-39
+activity#com.jtournie.cml.tasitrack.DashboardActivity
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:18:9-27:20
+	android:screenOrientation
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:21:13-49
+	android:label
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:20:13-45
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:19:13-46
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:22:13-26:29
+action#android.intent.action.MAIN
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:23:17-69
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:23:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:25:17-77
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:25:27-74
+activity#com.jtournie.cml.tasitrack.AlarmActivity
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:28:9-31:20
+	android:screenOrientation
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:30:13-49
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:29:13-42
+service#com.jtournie.cml.tasitrack.AlarmService
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:33:9-35:38
+	android:enabled
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:35:13-35
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:34:13-41
+receiver#com.jtournie.cml.tasitrack.AlarmManagerHelper
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:37:9-43:20
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:37:19-53
+intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.TIMEZONE_CHANGED+android.intent.action.TIME_SET
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:38:13-42:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:39:17-79
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:39:25-76
+action#android.intent.action.TIME_SET
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:40:17-73
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:40:25-70
+action#android.intent.action.TIMEZONE_CHANGED
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:41:17-81
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:41:25-78
+activity#com.jtournie.cml.tasitrack.SettingsIntakeTimeActivity
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:45:9-49:20
+	android:screenOrientation
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:48:13-49
+	android:label
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:47:13-60
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:46:13-55
+activity#com.jtournie.cml.tasitrack.AboutActivity
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:50:9-58:20
+	android:screenOrientation
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:54:13-49
+	android:label
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:52:13-57
+	android:parentActivityName
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:53:13-60
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:51:13-42
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:55:13-57:80
+	android:value
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:57:17-77
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:56:17-63
+activity#com.jtournie.cml.tasitrack.SettingsNotificationsActivity
+ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:59:9-62:20
+	android:label
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:61:13-74
+	android:name
+		ADDED from /Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/AndroidManifest.xml:60:13-58

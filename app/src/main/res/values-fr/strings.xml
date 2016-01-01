@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TasiTrack</string>
-
 
     <string name="title_activity_settings">Définition Heures de Prise</string>
     <string name="action_settings">Heures de prise...</string>
@@ -11,27 +9,27 @@
 
     <string name="about">A propros...</string>
     <string name="title_activity_about">A propos</string>
-    <string name="text_about_content">Version 2.0 \n\n05-Janvier-2015\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
+    <string name="text_about_content">Version 2.0 \n\n29-Decembre-2015\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
     <string name="alarm_button_text">Noté!</string>
-    <string name="alarm_text_am1">Début du jeûne (Matin)</string>
-    <string name="alarm_text_am2">Prendre médicament</string>
-    <string name="alarm_text_am3">Fin du jeûne</string>
-    <string name="alarm_text_pm1">Début du jeûne (Soir)</string>
-    <string name="alarm_text_pm2">Prendre médicament (Soir)</string>
-    <string name="alarm_text_pm3">Fin du jeûne (soir)</string>
-    <string name="alarm_title">Alarme!</string>
-    <string name="dash_can_eat_in">Fin du jeûne dans</string>
-    <string name="dash_stop_eating_in">Début du jeûne dans</string>
-    <string name="dash_take_medicine_in">Prendre le médicament dans</string>
+    <string name="alarm_text_am1">Début du jeûne\nMatin</string>
+    <string name="alarm_text_am2">Prise du médicament\nMatin</string>
+    <string name="alarm_text_am3">Fin du jeûne\nMatin</string>
+    <string name="alarm_text_pm1">Début du jeûne\nSoir</string>
+    <string name="alarm_text_pm2">Prise du médicament\nSoir</string>
+    <string name="alarm_text_pm3">Fin du jeûne\nSoir</string>
+    <string name="alarm_title">Alarmes</string>
+    <string name="dash_can_eat_in">Fin du jeûne dans </string>
+    <string name="dash_stop_eating_in">Début du jeûne dans </string>
+    <string name="dash_take_medicine_in">Prise du médicament dans</string>
     <string name="pref_evening_medicine_time">Heure de prise (Soir)</string>
     <string name="pref_morning_medicine_time">Heure de prise (Matin)</string>
-    <string name="pref_evening_notifications">Notifications (Soir)</string>
+    <string name="pref_evening_notifications">Alarmes (Soir)</string>
     <string name="pref_hour">Heure</string>
     <string name="pref_minute">Minute</string>
-    <string name="pref_morning_notifications">Notifications (Matin)</string>
-    <string name="pref_notif_evening_start_eating_details">Alarme fin du jeûne du soir</string>
+    <string name="pref_morning_notifications">Alarmes (Matin)</string>
+    <string name="pref_notif_evening_start_eating_details">Alarme de fin du jeûne du soir</string>
     <string name="pref_notif_evening_start_eating_title">Fin du jeûne</string>
-    <string name="pref_notif_evening_stop_eating_details">Alarme du début du jeûne du soir</string>
+    <string name="pref_notif_evening_stop_eating_details">Alarme de début du jeûne du soir</string>
     <string name="pref_notif_evening_stop_eating_title">Début du jeûne</string>
     <string name="pref_notif_evening_take_medicine_title">Prise du médicament</string>
     <string name="pref_notif_morning_start_eating_title">Fin du jeûne</string>
@@ -41,21 +39,37 @@
     <string name="pref_notif_morning_start_eating_details">Alarme de début du jeûne du matin</string>
     <string name="pref_notif_morning_stop_eating_details">Alarme de fin du jeûne du matin</string>
     <string name="pref_notif_morning_take_medicine_details">Alarme de prise du médicament du matin</string>
-    <string name="pref_notif_sound_detail">"Sonnerie jouée lors de l'activation de l'alarme"</string>
+    <string name="pref_notif_sound_detail">Sonnerie jouée lors de l\'activation de l\'alarme</string>
     <string name="pref_notif_sound_title">Sonnerie</string>
-    <string name="action_settings_notifications">Notifications...</string>
-    <string name="title_activity_settings_notifications">Configuration des Notifications</string>
+    <string name="action_settings_notifications">Alarmes...</string>
+    <string name="title_activity_settings_notifications">Configuration des Alarmes</string>
     <string name="pref_notif_evening_last_meal_title">Dernier snack</string>
-    <string name="pref_notif_evening_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du soir</string>
-    <string name="pref_notif_morning_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du matin</string>
+    <string name="pref_notif_evening_last_meal_details">Alarme d\'un dernier snack 30 minutes avant le jeûne du soir</string>
+    <string name="pref_notif_morning_last_meal_details">Alarme d\'un dernier snack 30 minutes avant le jeûne du matin</string>
     <string name="pref_notif_morning_last_meal_title">Dernier snack</string>
-    <string name="alarm_text_am0">Dernier snack (Matin)</string>
-    <string name="alarm_text_pm0">Dernier snack (Soir)</string>
-    <string name="pref_evening_notification_title">Notifications (Soir)</string>
-    <string name="pref_evening_notification_summary">Definition des alarmes possible pour la prise du soir</string>
-    <string name="pref_morning_notification_title">Notifications (Matin)</string>
-    <string name="pref_morning_notification_summary">Definition des alarmes possible pour la prise du matin</string>
+    <string name="alarm_text_am0">Dernier snack\nMatin</string>
+    <string name="alarm_text_pm0">Dernier snack\nSoir</string>
+    <string name="pref_evening_notification_title">Alarmes (Soir)</string>
+    <string name="pref_evening_notification_summary">Définition des alarmes possibles pour la prise du soir</string>
+    <string name="pref_morning_notification_title">Alarmes (Matin)</string>
+    <string name="pref_morning_notification_summary">Configuration des alarmes de la prise du matin</string>
     <string name="add_widget">Ajouter widget</string>
     <string name="appwidget_text">Exemple</string>
+    <string name="notification_generic">Alarme</string>
+    <string name="alarm_ack_info">Touchez l\'écran pour fermer l\'écran d\'alarme</string>
+    <string name="pref_intake_time_summary" >Paramétrage des heures de prise du médicament</string>
+    <string name="pref_intake_time_title" >Heure de prise</string>
+    <string name="pref_onetime_medicine_time" >Heure de prise</string>
+    <string name="pref_intake_time_summary_one" >Paramétrage de l\'heure de prise du médicament</string>
+    <string name="pref_notif_once_title" >Prise du médicament</string>
+    <string name="pref_notif_once_details" >Alarme de prise du médicament</string>
+    <string name="alarm_text_once" >Prise du médicament</string>
+    <string name="dosage_reminder" >N\'oubliez pas de configurer les heures de prise du médicament</string>
+    <string name="firstUseWarningTitle">Bienvenu!</string>
+    <string name="firstUseWarningMessage">Ceci est la première fois que vous utilisez l\'application.\nAssurez-vous de correctement configurer la posologie et l\'heure de prise des médicaments.</string>
+    <string name="pref_dosage_summary">Paramétrage du nombre de prises de médicament par jour</string>
+    <string name="pref_dosage_title">Posologie</string>
+    <string name="text_credits_content_lmcfrance">\nApplication supportée par LMC France\nhttp://www.lmc-france.org</string>
+    <string name="app_name">STOP LMC</string>
 
 </resources>

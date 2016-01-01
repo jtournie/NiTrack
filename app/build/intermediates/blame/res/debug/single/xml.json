@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/app_widget_clock_info.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/app_widget_clock_info.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/preferences_notifications_twice.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_notifications_twice.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/app_widgetsymbolandtext_info.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/app_widgetsymbolandtext_info.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/preferences_intake_time_global.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_intake_time_global.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/preferences_intake_time_twice.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_intake_time_twice.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/preferences_intake_time_once.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_intake_time_once.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/xml/preferences_notifications_once.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences_notifications_once.xml"
+    }
+]

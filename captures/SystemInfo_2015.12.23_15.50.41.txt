@@ -1,0 +1,90 @@
+Applications Graphics Acceleration Info:
+Uptime: 29538065 Realtime: 102686138
+
+** Graphics info for pid 27374 [com.jtournie.nitrack.nitrack] **
+
+Recent DisplayList operations
+              DrawRenderNode
+                DrawRect
+              Save
+              ClipRect
+              DrawText
+              RestoreToCount
+            DrawRenderNode
+              DrawRenderNode
+                DrawRect
+              Save
+              ClipRect
+              DrawText
+              RestoreToCount
+        DrawRenderNode
+        DrawRenderNode
+        DrawRenderNode
+    DrawRenderNode
+      DrawRenderNode
+        DrawPatch
+      DrawRenderNode
+        DrawRenderNode
+          DrawRenderNode
+          DrawRenderNode
+            DrawRenderNode
+              Save
+              ConcatMatrix
+              Save
+              DrawBitmap
+              RestoreToCount
+          DrawRenderNode
+            Save
+            ClipRect
+            DrawRenderNode
+              Save
+              ClipRect
+              DrawText
+              RestoreToCount
+            RestoreToCount
+    DrawPatch
+RestoreToCount
+DrawRect
+DrawRect
+DrawRect
+DrawRect
+multiDraw
+  DrawText
+DrawPatch
+DrawPatch
+DrawBitmap
+DrawText
+
+Caches:
+Current memory usage / total memory usage (bytes):
+  TextureCache          8430436 / 25165824
+  LayerCache                  0 / 16777216 (numLayers = 0)
+  Garbage layers              0
+  Active layers               0
+  RenderBufferCache           0 /  2097152
+  GradientCache               0 /   524288
+  PathCache                   0 / 10485760
+  TessellationCache           0 /  1048576
+  TextDropShadowCache         0 /  2097152
+  PatchCache                768 /   131072
+  FontRenderer 0 A8      524288 /   524288
+  FontRenderer 0 RGBA         0 /        0
+  FontRenderer 0 total   524288 /   524288
+Other:
+  FboCache                    0 /        0
+Total memory usage:
+  8955492 bytes, 8.54 MB
+
+Profile data in ms:
+
+	com.jtournie.nitrack.nitrack/com.jtournie.cml.tasitrack.DashboardActivity/android.view.ViewRootImpl@25edfd62 (visibility=0)
+View hierarchy:
+
+  com.jtournie.nitrack.nitrack/com.jtournie.cml.tasitrack.DashboardActivity/android.view.ViewRootImpl@25edfd62
+  31 views, 32.51 kB of display lists
+
+
+Total ViewRootImpl: 1
+Total Views:        31
+Total DisplayList:  32.51 kB
+

@@ -1,0 +1,26 @@
+[
+    {
+        "outputFile": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/values-v14/values-v14.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 43,
+                    "endOffset": 94
+                },
+                "from": {
+                    "file": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/values-v14/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 209,
+                        "endColumn": 43,
+                        "endOffset": 248
+                    }
+                }
+            }
+        ]
+    }
+]

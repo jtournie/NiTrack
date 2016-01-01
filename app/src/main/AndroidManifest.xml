@@ -12,9 +12,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/nitrack_icon"
+        android:icon="@drawable/clock_stopcml"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/STOPCML" >
         <activity
             android:name=".DashboardActivity"
             android:label="@string/app_name"
@@ -37,6 +37,8 @@
         <receiver android:name=".AlarmManagerHelper" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
             </intent-filter>
         </receiver>
 
@@ -60,7 +62,7 @@
         </activity>
 
 
-
+        <!--
         <receiver android:name=".AppWidgetClock" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -71,7 +73,7 @@
                 android:resource="@xml/app_widget_clock_info" />
         </receiver>
 
-        <receiver android:name="com.jtournie.cml.tasitrack.AppWidgetSymbolAndText" >
+        <receiver android:name=".AppWidgetSymbolAndText" >
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
                 <action android:name="com.jtournie.cml.tasitrack.AppWidgetSymbolAndText.ACTION_WIDGET_CLICKED" />
@@ -81,6 +83,7 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widgetsymbolandtext_info" />
         </receiver>
+        -->
 
     </application>
 

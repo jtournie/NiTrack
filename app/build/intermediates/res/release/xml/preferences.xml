@@ -1,0 +1,47 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_morning_medicine_time"
+        android:key="pref_key_medicine_time_am_title">
+
+
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_am_hour"
+            android:title="@string/pref_hour"
+            android:entries="@array/hourIntakeAM"
+            android:entryValues="@array/hourIntakeAM"
+            android:defaultValue="7"
+            />
+
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_am_minute"
+            android:title="@string/pref_minute"
+            android:entries="@array/minIntake"
+            android:entryValues="@array/minIntake"
+            android:defaultValue="0"
+            />
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:title="@string/pref_evening_medicine_time"
+        android:key="pref_key_medicine_time_pm_title">
+
+
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_pm_hour"
+            android:title="@string/pref_hour"
+            android:entries="@array/hourIntakePM"
+            android:entryValues="@array/hourIntakePM"
+            android:defaultValue="19"
+            />
+
+        <com.jtournie.cml.tasitrack.ListPreferenceShowSummary
+            android:key="pref_key_intake_pm_minute"
+            android:title="@string/pref_minute"
+            android:entries="@array/minIntake"
+            android:entryValues="@array/minIntake"
+            android:defaultValue="0"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen><!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/xml/preferences.xml -->

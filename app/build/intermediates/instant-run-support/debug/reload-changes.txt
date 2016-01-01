@@ -1,0 +1,2 @@
+/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/com/jtournie/cml/tasitrack/R$id$override.class
+/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/transforms/instantRun/debug/folders/4000/1/enhanced/com/android/build/gradle/internal/incremental/AppPatchesLoaderImpl.class

@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 
 /**
@@ -13,7 +15,8 @@ import android.os.Bundle;
 
     public class InfoDialog extends DialogFragment
     {
-        public InfoDialog()
+
+        public InfoDialog( )
         {
 
         }
@@ -30,8 +33,9 @@ import android.os.Bundle;
                     .setMessage(message)
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            //Nothing to do
+                        public void onClick(DialogInterface dialog, int which)
+                        {
+
                         }
                     })
 

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/app_widget_clock.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/app_widget_clock.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/activity_alarm.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/activity_alarm.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/app_widgetsymbolandtext.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/app_widgetsymbolandtext.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/activity_about.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/activity_about.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/activity_settings.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/layout/activity_dashboard.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/activity_dashboard.xml"
+    }
+]

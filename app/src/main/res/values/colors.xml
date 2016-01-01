@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <color name="cml_icon">#f80707</color>
+    <color name="cml_background_bars">#9e9e9e</color>
+    <color name="cml_text">#000000</color>
+    <color name="cml_background_main">#ffffff</color>
+    <color name="black">#f10707</color>
+    <color name="white">#ffffff</color>
+</resources>

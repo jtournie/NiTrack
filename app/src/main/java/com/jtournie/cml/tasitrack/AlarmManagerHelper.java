@@ -33,11 +33,15 @@ public class AlarmManagerHelper extends BroadcastReceiver {
     public static final String TONE = "alarmTone";
 
     @Override
-    public void onReceive(Context context, Intent intent) {
+    public void onReceive(Context context, Intent intent)
+    {
+        //called when the system is rebooted or when the time/date has changed
+        Log.d("INFO","Resetting the alarms from intent!");
         setAlarms(context);
     }
 
     public static void setAlarms(Context context) {
+        Log.d("INFO","Calling setAlarms");
         cancelAlarms(context);
 
         List<AlarmModel> listAlarms = getAlarms(context);
@@ -125,17 +129,29 @@ public class AlarmManagerHelper extends BroadcastReceiver {
      */
     private static List<AlarmModel> getAlarms(Context context){
 
+        //get the whole preferences for the application
+        TasitrackPreferences tasitrackPreferences = new TasitrackPreferences(context);
+
         SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
 
 
         List<AlarmModel> listAlarms = new ArrayList<AlarmModel>();
 
+        //dosage
+        int dosage = Integer.parseInt(sharedPreferences.getString("pref_key_dosage", "2"));
+        boolean isTwiceIntake = dosage == 1 ? false : true;
 
         //morning and evening intake time
-        int iMorningIntakeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_hour", "7"));
-        int iMorningIntakeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_am_minute", "0"));
-        int iEveningIntakeHour = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_hour", "19"));
-        int iEveningIntakeMinute = Integer.parseInt(sharedPreferences.getString("pref_key_intake_pm_minute", "0"));
+        int iMorningIntakeHour = tasitrackPreferences.twice_hour_am;
+        int iMorningIntakeMinute = tasitrackPreferences.twice_minute_am;
+        int iEveningIntakeHour = tasitrackPreferences.twice_hour_pm;
+        int iEveningIntakeMinute = tasitrackPreferences.twice_minute_pm;
+
+        //intake time for single intake
+        int iOnceIntakeHour = tasitrackPreferences.onetime_hour;
+        int iOnceIntakeMinute = tasitrackPreferences.onetime_minute;
+
+
 
         //the 4 alarms in the morning
         AlarmModel alarm0am = new AlarmModel();
@@ -148,7 +164,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm0am.timeHour = iMorningIntakeHour;
         alarm0am.timeMinute = iMorningIntakeMinute;
         alarm0am.shiftAlarm( -2, -30);
-        alarm0am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm0am_enable", false);
+        alarm0am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm0am_enable", false) && isTwiceIntake;
         alarm0am.name = context.getString(R.string.alarm_text_am0);
         alarm0am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm0am_tone", "N/A"));
         alarm0am.id = 0;
@@ -156,14 +172,14 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm1am.timeHour = iMorningIntakeHour;
         alarm1am.timeMinute = iMorningIntakeMinute;
         alarm1am.shiftAlarm(-2, 0);
-        alarm1am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1am_enable", false);
+        alarm1am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1am_enable", false) && isTwiceIntake;
         alarm1am.name = context.getString(R.string.alarm_text_am1);
         alarm1am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1am_tone", "N/A"));
         alarm1am.id = 1;
 
         alarm2am.timeHour = iMorningIntakeHour;
         alarm2am.timeMinute = iMorningIntakeMinute;
-        alarm2am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2am_enable", false);
+        alarm2am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2am_enable", false) && isTwiceIntake;
         alarm2am.name = context.getString(R.string.alarm_text_am2);
         alarm2am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2am_tone", "N/A"));
         alarm2am.id = 2;
@@ -171,7 +187,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm3am.timeHour = iMorningIntakeHour;
         alarm3am.timeMinute = iMorningIntakeMinute;
         alarm3am.shiftAlarm(1, 0);
-        alarm3am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3am_enable", false);
+        alarm3am.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3am_enable", false) && isTwiceIntake;
         alarm3am.name = context.getString(R.string.alarm_text_am3);
         alarm3am.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3am_tone", "N/A"));
         alarm3am.id = 3;
@@ -185,7 +201,7 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm0pm.timeHour = iEveningIntakeHour;
         alarm0pm.timeMinute = iEveningIntakeMinute;
         alarm0pm.shiftAlarm( -2, -30);
-        alarm0pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm0pm_enable", false);
+        alarm0pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm0pm_enable", false) && isTwiceIntake;
         alarm0pm.name = context.getString(R.string.alarm_text_pm0);
         alarm0pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm0pm_tone", "N/A"));
         alarm0pm.id = 10;
@@ -193,14 +209,14 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm1pm.timeHour = iEveningIntakeHour;
         alarm1pm.timeMinute = iEveningIntakeMinute;
         alarm1pm.shiftAlarm( -2, 0);
-        alarm1pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1pm_enable", false);
+        alarm1pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm1pm_enable", false) && isTwiceIntake;
         alarm1pm.name = context.getString(R.string.alarm_text_pm1);
         alarm1pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm1pm_tone", "N/A"));
         alarm1pm.id = 11;
 
         alarm2pm.timeHour = iEveningIntakeHour;
         alarm2pm.timeMinute = iEveningIntakeMinute;
-        alarm2pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2pm_enable", false);
+        alarm2pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm2pm_enable", false) && isTwiceIntake;
         alarm2pm.name = context.getString(R.string.alarm_text_pm2);
         alarm2pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm2pm_tone", "N/A"));
         alarm2pm.id = 12;
@@ -208,10 +224,20 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         alarm3pm.timeHour = iEveningIntakeHour;
         alarm3pm.timeMinute = iEveningIntakeMinute;
         alarm3pm.shiftAlarm( 1, 0);
-        alarm3pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3pm_enable", false);
+        alarm3pm.isEnabled = sharedPreferences.getBoolean("pref_key_alarm3pm_enable", false) && isTwiceIntake;
         alarm3pm.name = context.getString(R.string.alarm_text_pm3);
         alarm3pm.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm3pm_tone", "N/A"));
         alarm3pm.id = 13;
+
+
+        //alarm once
+        AlarmModel alarmonce = new AlarmModel();
+        alarmonce.timeHour = iOnceIntakeHour;
+        alarmonce.timeMinute = iOnceIntakeMinute;
+        alarmonce.isEnabled = sharedPreferences.getBoolean("pref_key_alarm_once_enable", false) && !isTwiceIntake;
+        alarmonce.name = context.getString(R.string.alarm_text_once);
+        alarmonce.alarmTone = Uri.parse(sharedPreferences.getString("pref_key_alarm_once_tone", "N/A"));
+        alarmonce.id = 14;
 
         /**
          * Testing
@@ -232,6 +258,8 @@ public class AlarmManagerHelper extends BroadcastReceiver {
         listAlarms.add(alarm1pm);
         listAlarms.add(alarm2pm);
         listAlarms.add(alarm3pm);
+
+        listAlarms.add(alarmonce);
 
         return listAlarms;
     }

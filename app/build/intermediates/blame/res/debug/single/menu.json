@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/menu/menu_about.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/menu/menu_about.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/menu/dashboard.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/menu/dashboard.xml"
+    },
+    {
+        "merged": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/build/intermediates/res/merged/debug/menu/menu_settings.xml",
+        "source": "/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/menu/menu_settings.xml"
+    }
+]

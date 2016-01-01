@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/widget_margin"
+    android:background="#00333333">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/Widget_ClockBackground"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/clock_colorbg_widget"
+                android:layout_weight="1"
+                />
+
+            <AnalogClock
+                android:id="@+id/Widget_Clock"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:dial="@drawable/clock_minutes_widget"
+                android:hand_hour="@drawable/clock_hands"
+                android:hand_minute="@drawable/clock_hand_minute"
+                android:scaleX="1"
+                android:scaleY="1"
+                android:layout_weight="1" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/layout/app_widget_clock.xml -->

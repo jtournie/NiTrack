@@ -10,6 +10,8 @@ import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Calendar;
@@ -39,17 +41,39 @@ public class AlarmActivity extends Activity {
 
 
 
+        //set the correct text and time
         TextView tvName = (TextView) findViewById(R.id.alarm_screen_name);
         tvName.setText(name);
 
         TextView tvTime = (TextView) findViewById(R.id.alarm_screen_time);
         tvTime.setText(String.format("%02d : %02d", timeHour, timeMinute));
 
-        Button dismissButton = (Button) findViewById(R.id.alarm_screen_button);
-        dismissButton.setOnClickListener(new View.OnClickListener() {
+        //Set the correct icon for the alarm (eating, pill, snack, etc.)
+        ImageView alarmIcon = (ImageView) findViewById(R.id.alarm_screen_icon);
+        if ( name.equalsIgnoreCase( this.getString(R.string.alarm_text_am0))
+                || name.equalsIgnoreCase(this.getString(R.string.alarm_text_pm0))  )
+        {
+            alarmIcon.setImageResource(R.drawable.snacking_enabled);
+        } else if(name.equalsIgnoreCase( this.getString(R.string.alarm_text_am1))
+                || name.equalsIgnoreCase(this.getString(R.string.alarm_text_pm1)))
+        {
+            alarmIcon.setImageResource(R.drawable.noeating_enabled);
+        } else if (name.equalsIgnoreCase( this.getString(R.string.alarm_text_am2))
+                || name.equalsIgnoreCase(this.getString(R.string.alarm_text_pm2)))
+        {
+            alarmIcon.setImageResource(R.drawable.pill2);
+        } else
+        {
+            alarmIcon.setImageResource(R.drawable.eating_enabled);
+        }
+
+
+        //if click anywhere on the screen to stop the activity
+        LinearLayout layout = (LinearLayout) findViewById(R.id.alarm_screen_main_layout);
+        layout.setOnClickListener(new View.OnClickListener() {
 
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 try {
                     if (mPlayer != null) { //redundant with the try/catch but make it faster
                         if (mPlayer.isPlaying()) {

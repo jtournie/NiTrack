@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/values-fr/array.xml -->
+    <eat-comment/>
+    <string-array name="hourIntakeAM">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+        <item name="5">5</item>
+        <item name="6">6</item>
+        <item name="7">7</item>
+        <item name="8">8</item>
+        <item name="9">9</item>
+        <item name="10">10</item>
+        <item name="11">11</item>
+    </string-array>
+    <string-array name="hourIntakePM">
+        <item name="12">12</item>
+        <item name="13">13</item>
+        <item name="14">14</item>
+        <item name="15">15</item>
+        <item name="16">16</item>
+        <item name="17">17</item>
+        <item name="18">18</item>
+        <item name="29">19</item>
+        <item name="20">20</item>
+        <item name="21">21</item>
+        <item name="22">22</item>
+        <item name="23">23</item>
+    </string-array>
+    <string-array name="minIntake">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+    <!-- From: file:/Users/jtournie/Desktop/Perso/Android/NiTrack/app/src/main/res/values-fr/strings.xml -->
+    <eat-comment/>
+    <string name="about">A propros...</string>
+    <string name="action_settings">Heures de prise...</string>
+    <string name="action_settings_notifications">Notifications...</string>
+    <string name="add_widget">Ajouter widget</string>
+    <string name="alarm_button_text">Noté!</string>
+    <string name="alarm_text_am0">Dernier snack (Matin)</string>
+    <string name="alarm_text_am1">Début du jeûne (Matin)</string>
+    <string name="alarm_text_am2">Prendre médicament</string>
+    <string name="alarm_text_am3">Fin du jeûne</string>
+    <string name="alarm_text_pm0">Dernier snack (Soir)</string>
+    <string name="alarm_text_pm1">Début du jeûne (Soir)</string>
+    <string name="alarm_text_pm2">Prendre médicament (Soir)</string>
+    <string name="alarm_text_pm3">Fin du jeûne (soir)</string>
+    <string name="alarm_title">Alarme!</string>
+    <string name="app_name">TasiTrack</string>
+    <string name="appwidget_text">Exemple</string>
+    <string name="change_intake_time">Raccourci heure de prise</string>
+    <string name="dash_can_eat_in">Fin du jeûne dans</string>
+    <string name="dash_stop_eating_in">Début du jeûne dans</string>
+    <string name="dash_take_medicine_in">Prendre le médicament dans</string>
+    <string name="pref_evening_medicine_time">Heure de prise (Soir)</string>
+    <string name="pref_evening_notification_summary">Definition des alarmes possible pour la prise du soir</string>
+    <string name="pref_evening_notification_title">Notifications (Soir)</string>
+    <string name="pref_evening_notifications">Notifications (Soir)</string>
+    <string name="pref_hour">Heure</string>
+    <string name="pref_minute">Minute</string>
+    <string name="pref_morning_medicine_time">Heure de prise (Matin)</string>
+    <string name="pref_morning_notification_summary">Definition des alarmes possible pour la prise du matin</string>
+    <string name="pref_morning_notification_title">Notifications (Matin)</string>
+    <string name="pref_morning_notifications">Notifications (Matin)</string>
+    <string name="pref_notif_evening_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du soir</string>
+    <string name="pref_notif_evening_last_meal_title">Dernier snack</string>
+    <string name="pref_notif_evening_start_eating_details">Alarme fin du jeûne du soir</string>
+    <string name="pref_notif_evening_start_eating_title">Fin du jeûne</string>
+    <string name="pref_notif_evening_stop_eating_details">Alarme du début du jeûne du soir</string>
+    <string name="pref_notif_evening_stop_eating_title">Début du jeûne</string>
+    <string name="pref_notif_evening_take_medicine_details">Alarme de prise du médicament du soir</string>
+    <string name="pref_notif_evening_take_medicine_title">Prise du médicament</string>
+    <string name="pref_notif_morning_last_meal_details">Alarme pour prendre un dernier snack 30 minutes avant le jeûne du matin</string>
+    <string name="pref_notif_morning_last_meal_title">Dernier snack</string>
+    <string name="pref_notif_morning_start_eating_details">Alarme de début du jeûne du matin</string>
+    <string name="pref_notif_morning_start_eating_title">Fin du jeûne</string>
+    <string name="pref_notif_morning_stop_eating_details">Alarme de fin du jeûne du matin</string>
+    <string name="pref_notif_morning_stop_eating_title">Début du jeûne</string>
+    <string name="pref_notif_morning_take_medicine_details">Alarme de prise du médicament du matin</string>
+    <string name="pref_notif_morning_take_medicine_title">Prise du médicament</string>
+    <string name="pref_notif_sound_detail">"Sonnerie jouée lors de l'activation de l'alarme"</string>
+    <string name="pref_notif_sound_title">Sonnerie</string>
+    <string name="text_about_content">Version 2.0 \n\n05-Janvier-2015\n\nVeuillez envoyer vos commentaires ou suggestions à:\n jeancharles.tournier@gmail.com</string>
+    <string name="title_activity_about">A propos</string>
+    <string name="title_activity_settings">Définition Heures de Prise</string>
+    <string name="title_activity_settings_notifications">Configuration des Notifications</string>
+</resources>

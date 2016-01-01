@@ -1,23 +1,45 @@
 package com.jtournie.cml.tasitrack;
 
+import android.content.Context;
+
 /**
  * Created by jtournie on 22/11/14.
  */
 public class MedicineSchedule {
     private NiTime inTakeTimeAM;
     private NiTime inTakeTimePM;
+    private NiTime inTakeTimeOnce;
+    private TasitrackPreferences tasitrackPreferences;
 
     final int STATE_EATING = 1;
     final int STATE_FEASTING_PRE_MEDICINE = 2;
     final int STATE_FEASTING_POST_MEDICINE = 3;
+    final int STATE_SNACK = 4;
 
     public MedicineSchedule(User currentUser)
+    {
+        initMedicineSchedule(currentUser);
+
+        tasitrackPreferences = new TasitrackPreferences();
+    }
+
+    public MedicineSchedule(User currentUser, Context context)
+    {
+        initMedicineSchedule(currentUser);
+
+        tasitrackPreferences = new TasitrackPreferences(context);
+    }
+
+    private void initMedicineSchedule( User currentUser)
     {
         inTakeTimeAM = new NiTime();
         this.inTakeTimeAM = currentUser.getIntakeTimeAM();
 
         inTakeTimePM = new NiTime();
         this.inTakeTimePM = currentUser.getIntakeTimePM();
+
+        inTakeTimeOnce = new NiTime();
+        this.inTakeTimeOnce = currentUser.getIntakeTimeOnce();
     }
 
     public NiTime getRemainingTimeStopEating()
@@ -34,7 +56,16 @@ public class MedicineSchedule {
 
     public NiTime getRemainingTimeTakeMedicine()
     {
-        NiTime takeMedicineTime = getRemainingTimeGeneric(0);
+        NiTime takeMedicineTime;
+
+        if ( tasitrackPreferences.dosage == 1)
+        {
+            takeMedicineTime = inTakeTimeOnce.getRemainingTime(0);
+        } else
+        {
+            takeMedicineTime = getRemainingTimeGeneric(0);
+        }
+
         return takeMedicineTime;
     }
 
@@ -64,9 +95,23 @@ public class MedicineSchedule {
         NiTime niTimeTakeMedicine = getRemainingTimeTakeMedicine();
         NiTime niTimeStartEating = getRemainingTimeStartEating();
 
+
+        //If we are on dosage once a day it as if we are always feasting before medicine time
+        if (tasitrackPreferences.dosage == 1)
+        {
+            return STATE_FEASTING_PRE_MEDICINE;
+        }
+
+
         if ( niTimeStopEating.isSmaller(niTimeTakeMedicine) == 1 && niTimeStopEating.isSmaller(niTimeStartEating) == 1)
         {
             state = STATE_EATING;
+        }
+
+        //TODO: make the snack time a user setting
+        if ( niTimeStopEating.Hour == 0 && niTimeStopEating.Minute <= 30)
+        {
+            state = STATE_SNACK;
         }
 
         if ( niTimeTakeMedicine.isSmaller(niTimeStopEating) == 1 && niTimeTakeMedicine.isSmaller(niTimeStartEating) == 1)
@@ -78,6 +123,8 @@ public class MedicineSchedule {
         {
             state = STATE_FEASTING_POST_MEDICINE;
         }
+
+
 
         return state;
     }

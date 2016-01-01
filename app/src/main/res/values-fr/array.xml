@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string-array name="pref_dosage_entries">
+        <item name="1">Une fois par jour</item>
+        <item name="2">Deux fois par jour à jeûn</item>
+    </string-array>
+    <string-array name="pref_dosage_values">
+        <item name="1">1</item>
+        <item name="2">2</item>
+    </string-array>
     <string-array name="hourIntakeAM">
         <item name="0">0</item>
         <item name="1">1</item>
